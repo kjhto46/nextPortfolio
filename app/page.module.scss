@@ -1,0 +1,10 @@
+@import './mixins';
+
+$color-primary:blue;
+
+.title {background:$color-primary;}
+.article {height:60vh;}
+
+@include mobile(){
+   .title {background:gray;}
+}

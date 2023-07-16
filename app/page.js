@@ -1,4 +1,5 @@
 import { connectDB } from "@/util/database"
+import variables from './page.module.scss';
 
 export default async function Home() {
   const client = await connectDB;
@@ -6,6 +7,10 @@ export default async function Home() {
   let result = await db.collection('post').find().toArray()
   console.log(result)
   return(
-    <div>안녕</div>
+    <main className={`${variables.title} main`}>
+      <article className={`${variables.article} article01`}>
+        123
+      </article>
+    </main>
     )
 }
