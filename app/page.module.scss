@@ -1,10 +1,16 @@
-@import './mixins';
+@import "./mixins";
 
-$color-primary:blue;
+$color-primary: blue;
 
-.title {background:$color-primary;}
-.article {height:60vh;}
-
-@include mobile(){
-   .title {background:gray;}
+.title {
+  background: $color-primary;
+}
+.article01 {
+  height: 60vh;
+  color: #ff0000;
+}
+@include mobile() {
+  .title {
+    background: gray;
+  }
 }
