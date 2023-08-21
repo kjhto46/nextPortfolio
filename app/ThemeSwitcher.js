@@ -33,13 +33,13 @@ const ThemeSwitcher = () => {
   return (
     <>
       {darkTheme !== undefined && (
-        <a onClick={handleToggle} style={{ cursor: "pointer" }}>
+        <button onClick={handleToggle}>
           {darkTheme ? (
             <div className="lightAni">라이트모드</div>
           ) : (
             <div className="darkAni">다크모드</div>
           )}
-        </a>
+        </button>
       )}
     </>
   );
