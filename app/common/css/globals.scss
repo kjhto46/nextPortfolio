@@ -6,11 +6,22 @@
 body, body[data-theme="light"]{
     --color0-f:#000;
     --colorf-0:#fff;
+
+    --font-color01:#1c1c1c;
+
+    --colorModeBtnBg:#ED7B34;
+    --colorModeBtnColor:#192227;
 }
 
 body[data-theme="dark"] {
     --color0-f:#fff;
     --colorf-0:#000;
+    
+    --font-color01:#fff;
+
+    --colorModeBtnBg:#192227;
+    --colorModeBtnColor:#ED7B34;
+
 }
 
 *{outline:0!important; box-sizing:border-box;}
@@ -42,7 +53,6 @@ img,svg {width:auto; max-width:100%;}
     레이아웃
 ============================================================================================================*/
 .inner {position:relative; max-width:1440px; width:100%; margin:0 auto; padding:0 20px;}
-.inner:after {display:block; clear:both; content:'';}
 
 .only_pc {display:block;}
 .only_m {display:none;}
@@ -52,3 +62,7 @@ img,svg {width:auto; max-width:100%;}
     .only_m {display:block;}
 }
 
+
+:root {
+    --header-height-:80px;
+ }

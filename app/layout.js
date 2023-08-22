@@ -1,5 +1,5 @@
-import "./globals.scss";
-import Header from "./Header";
+import "./common/css/globals.scss";
+import Header from "./common/inc/Header";
 
 export const metadata = {
   title: "Create Next App",
@@ -49,11 +49,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body>
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: themeInitializerScript,
           }}
-        ></script>
+        ></script> */}
         <Header />
         {children}
       </body>
