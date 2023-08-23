@@ -1,16 +1,8 @@
 @import "./mixins";
 
-$color-primary: blue;
+@include tablet() {
+}
 
-.title {
-  background: $color-primary;
-}
-.article01 {
-  height: 60vh;
-  color: #ff0000;
-}
 @include mobile() {
-  .title {
-    background: gray;
-  }
 }
+

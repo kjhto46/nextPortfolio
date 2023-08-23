@@ -1,17 +1,19 @@
 .header {
-  position: fixed; left: 0; right: 0; top: 0; height: var(--header-height-);
+  position: fixed; left: 0; right: 0; top: 0; height: var(--header-height-); z-index:8000;
 
   > div { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1600px; margin: 0 auto; }
-  h1 a { display: flex; justify-content: center; align-items: center; height: var(--header-height-); font-size: 20px; color:var(--font-color01); }
+  h1 a { display: flex; justify-content: center; align-items: center; height: var(--header-height-); font-size: 20px; color: var(--font-color01); }
+  nav {
+    display: flex; justify-content: flex-end; align-items: center;
 
-  nav {display:flex; justify-content: flex-end; align-items: center;
-   ul {display:flex; align-items:center;
-      li a {padding:0 24px; line-height:var(--header-height-); font-size:16px; color:var(--font-color01);}   
-   }
-   }
+    ul {
+      display: flex; align-items: center;
 
+      li a { padding: 0 24px; line-height: var(--header-height-); font-size: 16px; color: var(--font-color01); }
+    }
+  }
   .colorModeBtn {
-    position: relative; display: flex; width: 64px; height: 32px; margin:0 0 0 24px; padding: 4px; background: var(--colorModeBtnBg); border-radius: 16px; transition: background 0.3s linear; cursor: pointer;
+    position: relative; display: flex; width: 64px; height: 32px; margin: 0 0 0 24px; padding: 4px; background: var(--colorModeBtnBg); border-radius: 16px; transition: background 0.3s linear; cursor: pointer;
 
     span { position: absolute; top: calc(50% - 12px); display: block; width: 24px; height: 24px; border-radius: 100%; background: var(--colorModeBtnColor); transition: left 0.3s linear; z-index: 2; }
     svg {
