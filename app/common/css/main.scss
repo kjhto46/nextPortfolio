@@ -3,17 +3,43 @@
 
   &::before { content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 120vw; height: 120vw; background: #fff0de; border-radius: 100% / 25%; z-index: 2; }
   &::after { content: ""; position: absolute; left: 50%; top: calc(100% - 8vw); transform: translateX(-50%); width: 350vw; height: 350vw; background: var(--colorf-0); border-radius: 100%; z-index: 1; }
-  .txtArea { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width:100%; max-width:1440px; padding:0 20px; text-align: center; z-index: 5; 
-   h2 {position:relative; display:inline-block; font-size:64px; line-height:1.3; color:#ED7B34;}   
-}
+  .txtArea {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 1440px; padding: 0 20px; text-align: center; z-index: 5;
+
+    h2 {
+      position: relative; display: inline-flex; align-items: center; flex-direction: row; justify-content: center; flex-wrap: wrap; font-size: 64px; line-height: 1.3; color: #ED7B34;
+
+      span {
+        position: relative; display: inline-flex; justify-content: center; align-items: center; width: 48px; height: 48px; font-size: 10px;
+
+        $list: (#FFDD00, #77B3BA, #192227, #FFDD00);
+        @for $i from 0 through length($list) - 1 {
+          &:nth-child(#{$i + 1})::after {
+            content: ''; position: absolute; left: 0; right: 0; top: 0; bottom: 0; width: 100%; height: 100%; border-radius: 100%;
+        
+            background: nth($list, $i + 1);         
+          }
+        }
+        
+      }
+    }
+  }
   .mover {
-    position: absolute; user-select: none; cursor: grab; z-index: 20;
+    position: absolute; display: flex; justify-content: center; align-items: center; user-select: none; cursor: grab; z-index: 20;
 
     img { -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -o-user-select: none; user-select: none; }
+    svg { width: auto; max-width: 100%; height: auto; }
     &:active { cursor: grabbing; }
 
-    &.mover01 {left: 50px; top: 50px; display: flex; justify-content: center; align-items: center; width: 100px; height: 125px; font-weight: bold; font-size: 16px; background: #febf00; border-radius: 20px;}
-    &.mover02 { right: 30%; top: 15%; display: flex; justify-content: center; align-items: center; width: 50px; height: 50px; background: rgba(0, 0, 0, 0.4); }
-    &.mover03 { right: 30%; bottom: 15%; display: flex; justify-content: center; align-items: center; width: 180px; height: 180px; font-weight: 300; font-size: 16px; background: rgba(0, 0, 0, 0.4); }
+    @for $i from 1 through 3 {
+      &.mover0#{$i} {
+          opacity: calc(70% + (10% * $i));
+          filter: brightness(calc(70% + (10% * $i)));
+      }
+   }
+  
+    &.mover01 { right: 24%; top: 12%; width: 65px;}
+    &.mover02 { left: 10%; top: 22%; width: 120px;}
+    &.mover03 { right: 14%; bottom: 18%; width: 188px; }
   }
 }
