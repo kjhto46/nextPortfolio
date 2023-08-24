@@ -2,14 +2,14 @@
   position: fixed; left: 0; right: 0; top: 0; height: var(--header-height-); z-index:8000;
 
   > div { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1600px; margin: 0 auto; }
-  h1 a { display: flex; justify-content: center; align-items: center; height: var(--header-height-); font-size: 20px; color: var(--font-color01); }
+  h1 a { display: flex; justify-content: center; align-items: center; height: var(--header-height-); font-size: 20px; color: var(--contantColor01); }
   nav {
     display: flex; justify-content: flex-end; align-items: center;
 
     ul {
       display: flex; align-items: center;
 
-      li a { padding: 0 24px; line-height: var(--header-height-); font-size: 16px; color: var(--font-color01); }
+      li a { padding: 0 24px; line-height: var(--header-height-); font-size: 16px; color: var(--contantColor01); }
     }
   }
   .colorModeBtn {

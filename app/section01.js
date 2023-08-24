@@ -66,7 +66,7 @@ export default function Section01() {
   }, []);
 
   return (
-    <section ref={section01} id="section01" className="section01">
+    <section ref={section01} id="section01" className="section section01">
       <div className="txtArea">
         <h2>KW<span>O</span>N JUN HEE, P<span>O</span>RTF<span>O</span>LI<span>O</span></h2>
         <h2>Publisher & FrontEnd</h2>

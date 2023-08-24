@@ -1,5 +1,26 @@
 import "./common/css/globals.scss";
 import Header from "./common/inc/Header";
+import localFont from "next/font/local";
+
+const myFont = localFont({
+  src: './fonts/PretendardVariable.woff2',
+  fallback: [
+    'Pretendard',
+    '-apple-system',
+    'BlinkMacSystemFont',
+    'system-ui',
+    'Roboto',
+    'Helvetica Neue',
+    'Segoe UI',
+    'Apple SD Gothic Neo',
+    'Noto Sans KR',
+    'Malgun Gothic',
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol',
+    'sans-serif',
+  ],
+})
 
 export const metadata = {
   title: "Create Next App",
@@ -47,7 +68,7 @@ export default function RootLayout({ children }) {
     }
   
   return (
-    <html lang="en">
+    <html lang="ko-KR" className={myFont.className}>
       <body>
         {/* <script
           dangerouslySetInnerHTML={{
