@@ -10,14 +10,14 @@ export default function OrgBtn(props) {
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path d="M1 15L15 1" stroke="#ED7B34" strokeWidth="2" />
-          <rect x="5.41211" width="10.5882" height="1.76471" fill="#ED7B34" />
+          <path d="M1 15L15 1" strokeWidth="2" className="strokeColor"/>
+          <rect x="5.41211" width="10.5882" height="1.76471" className="fillColor" />
           <rect
             x="16"
             width="10.5882"
             height="1.76471"
             transform="rotate(90 16 0)"
-            fill="#ED7B34"
+            className="fillColor"
           />
         </svg>
       </span>
