@@ -5,7 +5,6 @@ export default function Section01() {
   const section01 = useRef(null);
 
   // 이전 스크립트의 동작을 담당하는 useEffect Hook
-
   useEffect(() => {
     const handleMouseMove = (e) => {
       section01.current.querySelectorAll(".layer").forEach((layer) => {
@@ -26,7 +25,6 @@ export default function Section01() {
           prevPosX = e.clientX;
           prevPosY = e.clientY;
           isPress = true;
-          $target.classList.add("active"); // 드래그 중인 .layer에 클래스 추가
         };
 
         const move = (e) => {
@@ -41,7 +39,6 @@ export default function Section01() {
 
         const end = () => {
           isPress = false;
-          $target.classList.remove("active"); // 드래그가 끝난 .layer에 클래스 삭제
         };
 
         $target.addEventListener("mousedown", start);
