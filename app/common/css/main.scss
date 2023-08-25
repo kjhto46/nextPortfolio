@@ -71,6 +71,7 @@
 
   }
 }
+
 .section02 {
    padding:140px 0;
    .inner {max-width:1240px;}
@@ -80,4 +81,13 @@
          span {font-weight:700;}
       }
    }
+   
+   .flexDiv {display:flex; flex-direction:row; flex-wrap:wrap; align-items:stretch; margin:100px 0 0;
+    .imgArea {width:51%;}
+    ul {width:49%;
+      li {padding:28px 0; font-size:16px; line-height:1.5; letter-spacing: -0.4px; color:#585858; border-bottom:1px solid #D9D9D9;
+        &:first-child {padding-top:0;}
+      }
+    }
+  }
 }
