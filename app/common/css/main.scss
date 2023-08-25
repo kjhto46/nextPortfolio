@@ -15,7 +15,10 @@
       &:hover { padding:0 4px 0 20px;
          &::before {top:6px; left:6px; right:-6px; bottom:-6px;}
          span {width:40px; height:40px;
-            svg {width:15px;} 
+            svg {width:15px;
+              .fillColor {fill:var(--colorModeBtnBg);}
+              .strokeColor {stroke:var(--colorModeBtnBg);}
+            } 
          }
       }
 	}
