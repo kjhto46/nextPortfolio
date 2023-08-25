@@ -63,15 +63,13 @@
           filter: brightness(calc(70% + (10% * $i)));
       }
    }
+   &:hover {filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.8));}
   
     &.mover01 { left: 74%; top: 12%; width: 65px;}
     &.mover02 { left: 10%; top: 22%; width: 120px;}
     &.mover03 { left: 68%; top: 62%; width: 188px; }
 
-  &.active {filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.8));}
-   
   }
-
 }
 .section02 {
    padding:140px 0;
