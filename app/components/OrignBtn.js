@@ -1,4 +1,4 @@
-export default function OrgBtn(props) {
+export default function OrignBtn(props) {
   return (
     <>
       <p>{props.viewtxt}</p>

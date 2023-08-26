@@ -20,7 +20,6 @@ export default async function Home() {
         <Section01 />
         <Section02 />
         <Section03 />
-        <article className={`${classes.article02}`}></article>
       </main>
     </>
   );
