@@ -2,8 +2,9 @@ import { connectDB } from "@/util/database";
 import classes from "./page.module.scss";
 import "./common/css/main.scss";
 import Section01 from "./section01";
-import Section03 from "./section03";
 import Section02 from "./section02";
+import Section03 from "./section03";
+import Section04 from "./section04";
 
 export default async function Home() {
   const client = await connectDB;
@@ -20,6 +21,7 @@ export default async function Home() {
         <Section01 />
         <Section02 />
         <Section03 />
+        <Section04 />
       </main>
     </>
   );

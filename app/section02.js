@@ -47,7 +47,11 @@ export default function Section02() {
           </Link>
         </div>
         <div className="flexDiv">
-          <div className="imgArea"></div>
+          <div className="imgArea">
+            <figure></figure>
+            <figure></figure>
+            <figure ></figure>
+          </div>
           <motion.ul  variants={boxVariants}  initial="start" whileInView="end" viewport={{ once: true, amount: 0.3 }}>
             <motion.li  variants={circleVariants}>
               저는 웹 표준성과 웹 접근성을 향상시키고 사용자의 관점에서 UI/UX를
