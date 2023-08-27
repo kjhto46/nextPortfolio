@@ -176,4 +176,10 @@
   .mainTit {display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; margin:0 0 60px;
     h2 {font-size: 56px; line-height: 1.3; font-weight:700; color: var(--contantColor01);}
   }
+
+  .mainProScroll {
+  display: flex; flex-direction: column; gap: 10vh; padding: 10vh; height: 400vh;
+
+    .emoji {position:sticky; top:10px; background: hsla(0, 0%, 100%, 0.2); border-radius: 3vmin; display: block; padding: 3vmin 10vmin; box-shadow: 0 2px 3px 0 hsla(0, 0%, 0%, 0.07), 0 10px 15px 0 hsla(0, 0%, 0%, 0.05); font-size: 40vmin; line-height: 160%; }
+  }
 }

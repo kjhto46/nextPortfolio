@@ -96,16 +96,16 @@ export default function Section03() {
           <MainSkill propsimg="sec03_img10.png" txtTit="GitHub" />
         </ParallaxText>
         <ParallaxText baseVelocity={-2}>
-          <MainSkill propsimg="sec03_img01.png" txtTit="Html" />
-          <MainSkill propsimg="sec03_img02.png" txtTit="CSS" />
-          <MainSkill propsimg="sec03_img03.png" txtTit="JavaScript" />
-          <MainSkill propsimg="sec03_img04.png" txtTit="SCSS" />
-          <MainSkill propsimg="sec03_img05.png" txtTit="Node.js" />
-          <MainSkill propsimg="sec03_img06.png" txtTit="React" />
-          <MainSkill propsimg="sec03_img07.png" txtTit="Next.js" />
-          <MainSkill propsimg="sec03_img08.png" txtTit="PHP" />
-          <MainSkill propsimg="sec03_img09.png" txtTit="Git" />
           <MainSkill propsimg="sec03_img10.png" txtTit="GitHub" />
+          <MainSkill propsimg="sec03_img09.png" txtTit="Git" />
+          <MainSkill propsimg="sec03_img08.png" txtTit="PHP" />
+          <MainSkill propsimg="sec03_img07.png" txtTit="Next.js" />
+          <MainSkill propsimg="sec03_img06.png" txtTit="React" />
+          <MainSkill propsimg="sec03_img05.png" txtTit="Node.js" />
+          <MainSkill propsimg="sec03_img04.png" txtTit="SCSS" />
+          <MainSkill propsimg="sec03_img03.png" txtTit="JavaScript" />
+          <MainSkill propsimg="sec03_img02.png" txtTit="CSS" />
+          <MainSkill propsimg="sec03_img01.png" txtTit="Html" />
         </ParallaxText>
       </div>
     </section>

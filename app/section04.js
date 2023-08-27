@@ -1,7 +1,7 @@
 "use client";
 import Link from "next/link";
 import OrignBtn from "./components/OrignBtn";
-import React, { useEffect, useState } from "react";
+import FileScroll from "./components/FileScroll.js"; 
 
 export default function Section04() {
   return (
@@ -13,19 +13,7 @@ export default function Section04() {
             <OrignBtn viewtxt="View Project" />
           </Link>
         </div>
-        <div className="mainProScroll">
-          <div className="sticky">
-            <div className="file file1">
-              <div>1</div>
-            </div>
-            <div className="file file2">
-              <div>2</div>
-            </div>
-            <div className="file file3">
-              <div>3</div>
-            </div>
-          </div>
-        </div>
+        <FileScroll />
       </div>
     </section>
   );
