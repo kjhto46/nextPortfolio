@@ -22,8 +22,8 @@ const circleVariants = [{
     rotate:0,
   },
   end: {
-    y: 80,
-    rotate: 5,
+    y: 50,
+    rotate: -4,
   },
 }, {
   start: {
@@ -34,13 +34,15 @@ const circleVariants = [{
   },
   end: {
     y: 50,
-    rotate: -3,
+    rotate: 4,
   },
 }, {
   start: {
+    y: 60,
     rotate: 0,
   },
   center:{
+    y: 60,
     rotate:0,
   },
   end: {
@@ -52,7 +54,7 @@ const circleVariants = [{
 
 const FileScroll = () => {
   const items = [
-    ["⚽️", "축구공", ""],
+    ["크레이티브그룹 아더", "축구공 안녕하세요", ""],
     ["🏀", "농구공", ""],
     ["🏈", "럭비공", ""],
   ];
@@ -66,7 +68,9 @@ const FileScroll = () => {
               variants={circleVariants[i]}
               className="fileCon"
             >
-              <h2>{contTit}</h2>
+              <div className="fileName">
+                <h2>{contTit}</h2>
+              </div>
               <div className="flexArea">
                 <figure><img src={contImg} alt={contTit} /></figure>
                 <div className="txtArea">{contxt}</div>

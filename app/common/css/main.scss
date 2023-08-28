@@ -172,28 +172,61 @@
     }
   }
 }
-.section04 {padding:140px 0; background: #FFF9F3;
-  .mainTit {display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; margin:0 0 60px;
-    h2 {font-size: 56px; line-height: 1.3; font-weight:700; color: var(--contantColor01);}
+
+.section04 {
+  padding: 140px 0; background: #FFF9F3;
+
+  .mainTit {
+    display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; margin: 0 0 60px;
+
+    h2 { font-size: 56px; line-height: 1.3; font-weight: 700; color: var(--contantColor01); }
   }
-
   .mainProScroll {
-    position:relative;
-    .file {
-      position:sticky; top:var(--header-height-);
-      display: flex; justify-content: center; align-items:flex-start; height:calc(100vh - var(--header-height-));
+    position: relative;
 
+    .file {
+      position: sticky; top: var(--header-height-); display: flex; justify-content: flex-start; height: calc(100vh - var(--header-height-));
+
+      .fileCon {
+        position: relative; display: flex; flex-direction: column; width: calc(100% - 70px); height: 80%; overflow: hidden; border-radius: 22px 0 0 0;
+
+        .fileName {
+          position: relative; display: block; width: 350px; height: 64px;
+
+          h2 { position: absolute; display: flex; justify-content: flex-start; align-items: center; width: 100%; height: 100%; padding: 0 40px 0 28px; z-index: 2; overflow: hidden; }
+          &::after { content: ''; position: absolute; left: 0; width: calc(100% - 32px); height: 0; border-bottom: 64px solid; border-right: 32px solid transparent; z-index: 1; }
+        }
+        .flexArea { width: 100%; height: calc(100% - 64px); border-radius: 0 22px 22px 22px; border: 2px solid #000; }
+      }
       &.file0 {
-        .fileCon{background:#FFDDA1;}
+        align-items: flex-start;
+
+        .fileCon {
+          .fileName {
+            &::after { border-bottom-color: #FFDDA1; }
+          }
+          .flexArea { background: #FFDDA1; }
+        }
       }
       &.file1 {
-        .fileCon{background:#AECDE7;}
+        justify-content: flex-end;
+
+        .fileCon {
+          .fileName {
+            &::after { border-bottom-color: #AECDE7; }
+          }
+          .flexArea { background: #AECDE7; }
+        }
       }
       &.file2 {
-        .fileCon{background:#8FC49E;}
-      }
+        justify-content: center;
 
-      .fileCon {position: relative; width:80%; height:80%; border: 2px dotted red;
+        .fileCon {
+          .fileName {
+            &::after { border-bottom-color: #8FC49E; }
+          }
+          .flexArea { background: #8FC49E; }
+        }
       }
     }
   }
