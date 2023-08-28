@@ -4,7 +4,7 @@
 		position: relative; display: flex; justify-content: space-between; align-items: center; width: 166px; height: 48px; padding: 0 20px; transition: all 0.3s ease;
 
 		&::before { content: ''; position: absolute; top: 2px; left: 2px; right: -2px; bottom: -2px; width: 100%; height: 100%; border-radius: 24px; z-index: 1; transition: all 0.3s ease; }
-		&::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; border-radius: 24px; z-index: 2; }
+		&::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: calc(100% - 4px); height: calc(100% - 4px); border-radius: 24px; border:2px solid; z-index: 2; }
 		p { position: relative; font-size: 15px; font-weight: 500; z-index: 3; }
 		span {
 			position: relative; display: flex; justify-content: center; align-items: center; width: 8px; height: 8px; border-radius: 100%; z-index: 3; transition: all 0.3s ease;
@@ -27,8 +27,8 @@
 			}
 		}
 		&.orgBtn {
-			&::before { background: var(--colorModeBtnColor); }
-			&::after { background: var(--colorModeBtnBg); }
+			&::before { background: var(--colorModeBtnColor);}
+			&::after { background: var(--colorModeBtnBg); border-color:var(--colorModeBtnColor); }
 			p { color: var(--colorModeBtnColor); }
 			span { background: var(--colorModeBtnColor); }
       &:hover {
@@ -42,7 +42,7 @@
 		}
 		&.skyblue {
 			&::before { background: var(--colorModeBtnColor2); }
-			&::after { background: var(--colorModeBtnBg2); }
+			&::after { background: var(--colorModeBtnBg2); border-color: var(--colorModeBtnColor2); }
 			p { color: var(--colorModeBtnColor2); }
 			span { background: var(--colorModeBtnColor2); }
       &:hover {
@@ -178,8 +178,23 @@
   }
 
   .mainProScroll {
-  display: flex; flex-direction: column; gap: 10vh; padding: 10vh; height: 400vh;
+    position:relative;
+    .file {
+      position:sticky; top:var(--header-height-);
+      display: flex; justify-content: center; align-items:flex-start; height:calc(100vh - var(--header-height-));
 
-    .emoji {position:sticky; top:10px; background: hsla(0, 0%, 100%, 0.2); border-radius: 3vmin; display: block; padding: 3vmin 10vmin; box-shadow: 0 2px 3px 0 hsla(0, 0%, 0%, 0.07), 0 10px 15px 0 hsla(0, 0%, 0%, 0.05); font-size: 40vmin; line-height: 160%; }
+      &.file0 {
+        .fileCon{background:#FFDDA1;}
+      }
+      &.file1 {
+        .fileCon{background:#AECDE7;}
+      }
+      &.file2 {
+        .fileCon{background:#8FC49E;}
+      }
+
+      .fileCon {position: relative; width:80%; height:80%; border: 2px dotted red;
+      }
+    }
   }
 }
