@@ -1,5 +1,6 @@
 import "./common/css/globals.scss";
 import Header from "./common/inc/Header";
+import Footer from "./common/inc/Footer";
 // import localFont from "next/font/local";
 
 // const myFont = localFont({
@@ -77,6 +78,7 @@ export default function RootLayout({ children }) {
         ></script> */}
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
