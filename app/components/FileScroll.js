@@ -8,7 +8,7 @@ const fileVariants = {
   },
   end: {
     transition: {
-      type: "spring",
+      type: "linear",
       duration: 0.5,
     },
   },
@@ -22,6 +22,7 @@ const circleVariants = [{
     rotate:0,
   },
   end: {
+    x: 10,
     y: 50,
     rotate: -4,
   },
@@ -33,6 +34,7 @@ const circleVariants = [{
     rotate:0,
   },
   end: {
+    x: -10,
     y: 50,
     rotate: 4,
   },
