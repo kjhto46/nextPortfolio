@@ -1,7 +1,16 @@
 .footer {
     background:#192227;
     .inner {max-width:1240px; margin:0 auto; padding:0 20px;}
+    .footerLink {padding:50px 0 100px;}
     .copyright {display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:space-between; align-items:center; height:48px; border-top:1px solid rgba($color:#fff, $alpha:0.3);
         p {font-size:14px; color:#969696;}
+        div {display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:flex-start; align-items:center; cursor:pointer; 
+            p {font-size:14px; font-weight:400; color:#fff;}
+            span {display:flex; justify-content:center; align-items:center; width:24px; height:24px; margin:0 0 0 8px; background:#fff; border-radius:50%;
+                svg {
+					.fillColor { fill:#192227; }
+                }
+            }
+        }
     }
 }
