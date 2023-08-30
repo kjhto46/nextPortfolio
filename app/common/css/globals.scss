@@ -15,6 +15,9 @@ body, body[data-theme="light"]{
 
     --colorModeBtnBg2:#77B3BA;
     --colorModeBtnColor2:#192227;
+
+    --colorModeBtnBg3:#ED7B34;
+    --colorModeBtnColor3:#fff;
 }
 
 body[data-theme="dark"] {
@@ -28,6 +31,9 @@ body[data-theme="dark"] {
 
     --colorModeBtnBg2:#192227;
     --colorModeBtnColor2:#77B3BA;
+
+    --colorModeBtnBg3:#fff;
+    --colorModeBtnColor3:#ED7B34;
 
 }
 
@@ -74,6 +80,74 @@ img,svg {width:auto; max-width:100%;}
 }
 
 
-:root {
-    --header-height-:80px;
- }
+:root { --header-height-: 80px; }
+
+.orignBtn {
+  position: relative; display: flex; justify-content: space-between; align-items: center; width: 166px; height: 48px; padding: 0 20px; transition: all 0.3s ease;
+
+  &::before { content: ''; position: absolute; top: 2px; left: 2px; right: -2px; bottom: -2px; width: 100%; height: 100%; border-radius: 24px; z-index: 1; transition: all 0.3s ease; }
+  &::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: calc(100% - 4px); height: calc(100% - 4px); border-radius: 24px; border: 2px solid; z-index: 2; }
+  p { position: relative; font-size: 15px; font-weight: 500; z-index: 3; }
+  span {
+    position: relative; display: flex; justify-content: center; align-items: center; width: 8px; height: 8px; border-radius: 100%; z-index: 3; transition: all 0.3s ease;
+
+    svg { width: 0; transition: all 0.3s ease; }
+  }
+  &:hover {
+    padding: 0 4px 0 20px;
+
+    &::before { top: 6px; left: 6px; right: -6px; bottom: -6px; }
+    span {
+      width: 40px; height: 40px;
+
+      svg {
+        width: 15px;
+
+        .fillColor { fill: var(--colorModeBtnBg); }
+        .strokeColor { stroke: var(--colorModeBtnBg); }
+      }
+    }
+  }
+  &.orgBtn {
+    &::before { background: var(--colorModeBtnColor); }
+    &::after { background: var(--colorModeBtnBg); border-color: var(--colorModeBtnColor); }
+    p { color: var(--colorModeBtnColor); }
+    span { background: var(--colorModeBtnColor); }
+    &:hover {
+      span {
+        svg {
+          .fillColor { fill: var(--colorModeBtnBg); }
+          .strokeColor { stroke: var(--colorModeBtnBg); }
+        }
+      }
+    }
+  }
+  &.orgWBtn {
+    &::before { background: var(--colorModeBtnColor3); }
+    &::after { background: var(--colorModeBtnBg3); border-color: var(--colorModeBtnColor3); }
+    p { color: var(--colorModeBtnColor3); }
+    span { background: var(--colorModeBtnColor3); }
+    &:hover {
+      span {
+        svg {
+          .fillColor { fill: var(--colorModeBtnBg); }
+          .strokeColor { stroke: var(--colorModeBtnBg); }
+        }
+      }
+    }
+  }
+  &.skyblue {
+    &::before { background: var(--colorModeBtnColor2); }
+    &::after { background: var(--colorModeBtnBg2); border-color: var(--colorModeBtnColor2); }
+    p { color: var(--colorModeBtnColor2); }
+    span { background: var(--colorModeBtnColor2); }
+    &:hover {
+      span {
+        svg {
+          .fillColor { fill: var(--colorModeBtnBg2); }
+          .strokeColor { stroke: var(--colorModeBtnBg2); }
+        }
+      }
+    }
+  }
+}

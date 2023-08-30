@@ -1,60 +1,5 @@
 // 공통요소
 .section {
-	.orignBtn {
-		position: relative; display: flex; justify-content: space-between; align-items: center; width: 166px; height: 48px; padding: 0 20px; transition: all 0.3s ease;
-
-		&::before { content: ''; position: absolute; top: 2px; left: 2px; right: -2px; bottom: -2px; width: 100%; height: 100%; border-radius: 24px; z-index: 1; transition: all 0.3s ease; }
-		&::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: calc(100% - 4px); height: calc(100% - 4px); border-radius: 24px; border:2px solid; z-index: 2; }
-		p { position: relative; font-size: 15px; font-weight: 500; z-index: 3; }
-		span {
-			position: relative; display: flex; justify-content: center; align-items: center; width: 8px; height: 8px; border-radius: 100%; z-index: 3; transition: all 0.3s ease;
-
-			svg { width: 0; transition: all 0.3s ease; }
-		}
-		&:hover {
-			padding: 0 4px 0 20px;
-
-			&::before { top: 6px; left: 6px; right: -6px; bottom: -6px; }
-			span {
-				width: 40px; height: 40px;
-
-				svg {
-					width: 15px;
-
-					.fillColor { fill: var(--colorModeBtnBg); }
-					.strokeColor { stroke: var(--colorModeBtnBg); }
-				}
-			}
-		}
-		&.orgBtn {
-			&::before { background: var(--colorModeBtnColor);}
-			&::after { background: var(--colorModeBtnBg); border-color:var(--colorModeBtnColor); }
-			p { color: var(--colorModeBtnColor); }
-			span { background: var(--colorModeBtnColor); }
-      &:hover {
-        span {
-          svg {
-            .fillColor { fill: var(--colorModeBtnBg); }
-            .strokeColor { stroke: var(--colorModeBtnBg); }
-          }
-        }
-      }
-		}
-		&.skyblue {
-			&::before { background: var(--colorModeBtnColor2); }
-			&::after { background: var(--colorModeBtnBg2); border-color: var(--colorModeBtnColor2); }
-			p { color: var(--colorModeBtnColor2); }
-			span { background: var(--colorModeBtnColor2); }
-      &:hover {
-        span {
-          svg {
-            .fillColor { fill: var(--colorModeBtnBg2); }
-            .strokeColor { stroke: var(--colorModeBtnBg2); }
-          }
-        }
-      }
-		}
-	}
 }
 
 .section01 {
@@ -188,22 +133,21 @@
       position: sticky; top: var(--header-height-); display: flex; justify-content: flex-start; height: calc(100vh - var(--header-height-));
 
       .fileCon {
-        position: relative; display: flex; flex-direction: column; width: calc(100% - 70px); height: 80%; overflow: hidden; border-radius: 22px 0 0 0;
+        position: relative; display: flex; flex-direction: column; width: calc(100% - 70px); height: 80%; border-radius: 22px 0 0 0;
 
-        .fileName {
-          position: relative; display: block; width: 350px; height: 64px;
-
-          h2 { position: absolute; display: flex; justify-content: flex-start; align-items: center; width: 100%; height: 100%; padding: 0 40px 0 28px; z-index: 2; overflow: hidden; }
-          &::after { content: ''; position: absolute; left: 0; width: calc(100% - 32px); height: 0; border-bottom: 64px solid; border-right: 32px solid transparent; z-index: 1; }
+        .fileHead {
+          position: relative; display: block; width: 364px; height: 60px; background-repeat:no-repeat; background-position:center; background-size:cover;
         }
-        .flexArea { width: 100%; height: calc(100% - 64px); border-radius: 0 22px 22px 22px; border: 2px solid #000; }
+        .flexAreabg {content:''; position:absolute; left:10px; right:-10px; top:70px; bottom:-10px; width:100%; height:calc(100% - 64px); border-radius:0 22px 22px 22px; background: #000; z-index:0;}
+        .flexArea {position:relative; width: 100%; height: calc(100% - 64px); border-radius: 0 22px 22px 22px; border: 2px solid #000; z-index:2;
+        }
       }
       &.file0 {
         align-items: flex-start;
 
         .fileCon {
-          .fileName {
-            &::after { border-bottom-color: #FFDDA1; }
+          .fileHead {
+            background-image:url('/main/sec04_head01.png');
           }
           .flexArea { background: #FFDDA1; }
         }
@@ -212,8 +156,8 @@
         justify-content: flex-end;
 
         .fileCon {
-          .fileName {
-            &::after { border-bottom-color: #AECDE7; }
+          .fileHead {
+            background-image:url('/main/sec04_head02.png');
           }
           .flexArea { background: #AECDE7; }
         }
@@ -222,8 +166,8 @@
         justify-content: center;
 
         .fileCon {
-          .fileName {
-            &::after { border-bottom-color: #8FC49E; }
+          .fileHead {
+            background-image:url('/main/sec04_head03.png');
           }
           .flexArea { background: #8FC49E; }
         }

@@ -1,16 +1,45 @@
 .footer {
-    background:#192227;
-    .inner {max-width:1240px; margin:0 auto; padding:0 20px;}
-    .footerLink {padding:50px 0 100px;}
-    .copyright {display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:space-between; align-items:center; height:48px; border-top:1px solid rgba($color:#fff, $alpha:0.3);
-        p {font-size:14px; color:#969696;}
-        div {display:flex; flex-direction:row; flex-wrap:nowrap; justify-content:flex-start; align-items:center; cursor:pointer; 
-            p {font-size:14px; font-weight:400; color:#fff;}
-            span {display:flex; justify-content:center; align-items:center; width:24px; height:24px; margin:0 0 0 8px; background:#fff; border-radius:50%;
-                svg {
-					.fillColor { fill:#192227; }
-                }
-            }
-        }
-    }
+	margin:-171px 0 0; padding:171px 0 0; overflow:hidden;
+    & > div {background:#192227;}
+	.inner { position: relative; max-width: 1240px; margin: 0 auto; padding: 0 20px; z-index: 10; }
+	.footerLink {display:flex; padding: 50px 0 100px; }
+	.copyright {
+		display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; height: 48px; border-top: 1px solid rgba($color: #fff, $alpha: 0.3);
+		p { font-size: 14px; color: #969696; }
+		div {
+			display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: center; cursor: pointer;
+
+			p { font-size: 14px; font-weight: 400; color: #fff; }
+			span {
+				display: flex; justify-content: center; align-items: center; width: 24px; height: 24px; margin: 0 0 0 8px; background: #fff; border-radius: 50%;
+
+				svg {
+					.fillColor { fill: #192227; }
+				}
+			}
+		}
+	}
 }
+
+	// 구름 디자인
+	.cloudScroll {
+		display:flex; white-space:nowrap; flex-wrap:nowrap; width: max-content; z-index: 1;
+
+		div {
+			position: relative; width: 100vw;
+
+			span {
+				position: absolute; width:342px; height:342px; background: #192227; border-radius: 50%;
+
+				&:nth-child(1) {left:-60px; top:-76px;}
+				&:nth-child(2) {left:164px; top:-166px;}
+				&:nth-child(3) {left:393px; top:-120px;}
+				&:nth-child(4) {left:667px; top:-154px;}
+				&:nth-child(5) {left:820px; top:-97px;}
+				&:nth-child(6) {left:1013px; top:-50px;}
+				&:nth-child(7) {left:1245px; top:-65px;}
+				&:nth-child(8) { left: 1450px; top:-120px;}
+				&:nth-child(9) { left: 1670px; top:-28px;}
+			}
+		}
+	}
