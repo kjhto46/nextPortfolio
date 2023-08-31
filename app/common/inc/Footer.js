@@ -80,7 +80,7 @@ export default function Footer() {
   };
   return (
     <footer className={`poppins ${classes.footer}`}>
-      <Parallaxcloud baseVelocity={-0.5}>
+      <Parallaxcloud baseVelocity={0.5}>
         <div>
           <span></span>
           <span></span>
@@ -106,10 +106,10 @@ export default function Footer() {
               <h4>Contact Me</h4>
               <ul>
                 <li>
-                  <a href="https://github.com/kjhto46" target="_blank">https://github.com/kjhto46</a>
+                  <a href="https://github.com/kjhto46" target="_blank"><span></span>https://github.com/kjhto46</a>
                 </li>
                 <li>
-                  <a href="mailto:tony1996kjh@naver.com">tony1996kjh@naver.com</a>
+                  <a href="mailto:tony1996kjh@naver.com"><span></span>tony1996kjh@naver.com</a>
                 </li>
               </ul>
             </div>
