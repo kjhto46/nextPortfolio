@@ -9,7 +9,7 @@ import Section04 from "./section04";
 export default async function Home() {
   const client = await connectDB;
   const db = client.db("portfolio");
-  let result = await db.collection("post").find().toArray();
+  let mainResult = await db.collection("mainport").find().toArray();
 
   return (
     <>
@@ -21,7 +21,7 @@ export default async function Home() {
         <Section01 />
         <Section02 />
         <Section03 />
-        <Section04 />
+        <Section04 mainResult={mainResult} />
       </main>
     </>
   );
