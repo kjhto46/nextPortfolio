@@ -56,17 +56,13 @@ const circleVariants = [
   },
 ];
 
-const FileScroll = () => {
-  const items = [
-    ["크레이티브그룹 아더", "반응형 페이지", "2023.01", "http://arthur.co.kr/", ""],
-    ["AMPK", "반응형 페이지", "2022.09", "http://ampk.1004home.kr/", ""],
-    ["동수원병원", "반응형 페이지", "2023.01", "https://www.dswhosp.co.kr/", ""]
-  ];
+export default function FileScroll({mainResult}){
+  console.log(mainResult);
 
   return (
     <div className="mainProScroll">
       <div className="sticky">
-        {items.map(([contTit, contxt1, contxt2, contxt3, contImg], i) => (
+        {mainResult.map((a, i) => (
           <motion.div
             variants={fileVariants}
             initial="start"
@@ -80,14 +76,14 @@ const FileScroll = () => {
               <div className="flexAreabg"></div>
               <div className="flexArea">
                 <figure>
-                  <img src={contImg} alt={contTit} />
+                  <img src={mainResult[i].wimg} alt={mainResult[i].name} />
                 </figure>
                 <div className="txtArea">
-                  <h2>{contTit}</h2>
+                  <h2>{mainResult[i].name}</h2>
                   <ul>
-                    <li>{contxt1}</li>
-                    <li>{contxt2}</li>
-                    <li><a href={contxt3} target="_blank">페이지 이동</a></li>
+                    <li>{mainResult[i].wdate}</li>
+                    <li>{mainResult[i].responsive}</li>
+                    <li><a href={mainResult[i].wsite} target="_blank">페이지 이동</a></li>
                   </ul>
                 </div>
               </div>
@@ -99,4 +95,3 @@ const FileScroll = () => {
   );
 };
 
-export default FileScroll;
