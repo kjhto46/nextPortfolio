@@ -106,10 +106,10 @@ export default function Footer() {
               <h4>Contact Me</h4>
               <ul>
                 <li>
-                  <a href="https://github.com/kjhto46" target="_blank"><span></span>https://github.com/kjhto46</a>
+                  <a href="https://github.com/kjhto46" target="_blank"><span><img src="/layout/footer_icon01.png" /></span><p>https://github.com/kjhto46</p></a>
                 </li>
                 <li>
-                  <a href="mailto:tony1996kjh@naver.com"><span></span>tony1996kjh@naver.com</a>
+                  <a href="mailto:tony1996kjh@naver.com"><span><img src="/layout/footer_icon02.png" /></span><p>tony1996kjh@naver.com</p></a>
                 </li>
               </ul>
             </div>
