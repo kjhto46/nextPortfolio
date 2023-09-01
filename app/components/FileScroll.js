@@ -57,8 +57,6 @@ const circleVariants = [
 ];
 
 export default function FileScroll({mainResult}){
-  console.log(mainResult);
-
   return (
     <div className="mainProScroll">
       <div className="sticky">
