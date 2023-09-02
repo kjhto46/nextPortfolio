@@ -1,7 +1,4 @@
-"use client";
-import Link from "next/link";
-import { useRef } from "react";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
 
 const fileVariants = {
   start: {},
@@ -73,14 +70,12 @@ export default function FileScroll({mainResult}){
               <div className="fileHead"></div>
               <div className="flexAreabg"></div>
               <div className="flexArea">
-                <figure>
-                  <img src={mainResult[i].wimg} alt={mainResult[i].name} />
-                </figure>
+              <figure style={{ backgroundImage: `url(${mainResult[i].wimg})` }}></figure>
                 <div className="txtArea">
                   <h2>{mainResult[i].name}</h2>
                   <ul>
-                    <li>{mainResult[i].wdate}</li>
                     <li>{mainResult[i].responsive}</li>
+                    <li>{mainResult[i].wdate}</li>
                     <li><a href={mainResult[i].wsite} target="_blank">페이지 이동</a></li>
                   </ul>
                 </div>

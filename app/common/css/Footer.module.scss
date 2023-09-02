@@ -1,5 +1,5 @@
 .footer {
-	margin:-171px 0 0; padding:171px 0 0; overflow:hidden;
+	margin:-8.9vw 0 0; padding:8.9vw 0 0; overflow:hidden;
     & > div {background:#192227;}
 	.inner { position: relative; max-width: 1240px; margin: 0 auto; padding: 0 20px; z-index: 10; }
 	.footerLink {display:flex; flex-direction:row; flex-wrap:wrap; align-items:flex-end; padding: 50px 0 100px; 
@@ -45,17 +45,17 @@
 			position: relative; width: 100vw;
 
 			span {
-				position: absolute; width:342px; height:342px; background: #192227; border-radius: 50%;
+				position: absolute; width:17.8vw; height:17.8vw; background: #192227; border-radius: 50%;
 
-				&:nth-child(1) {left:-60px; top:-76px;}
-				&:nth-child(2) {left:164px; top:-166px;}
-				&:nth-child(3) {left:393px; top:-120px;}
-				&:nth-child(4) {left:667px; top:-154px;}
-				&:nth-child(5) {left:820px; top:-97px;}
-				&:nth-child(6) {left:1013px; top:-50px;}
-				&:nth-child(7) {left:1245px; top:-65px;}
-				&:nth-child(8) { left: 1450px; top:-120px;}
-				&:nth-child(9) { left: 1670px; top:-28px;}
+				&:nth-child(1) {left:-3.125vw; top:-3.95vw;}
+				&:nth-child(2) {left:8.5vw; top:-8.6vw;}
+				&:nth-child(3) {left:20.4vw; top:-6.25vw;}
+				&:nth-child(4) {left:34.7vw; top:-8.02vw;}
+				&:nth-child(5) {left:42.7vw; top:-5.05vw;}
+				&:nth-child(6) {left:52.76vw; top:-2.6vw;}
+				&:nth-child(7) {left:64.84vw; top:-3.38vw;}
+				&:nth-child(8) { left:75.52vw; top:-6.25vw;}
+				&:nth-child(9) { left: 87vw; top:-1.45vw;}
 			}
 		}
 	}
