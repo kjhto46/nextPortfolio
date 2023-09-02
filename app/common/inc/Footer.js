@@ -97,13 +97,12 @@ export default function Footer() {
         <div className={classes.inner}>
           <div className={classes.footerLink}>
             <div className={classes.leftArea}>
-              <h2>Text undecided</h2>
+              <h2>Contact Me</h2>
               <Link href={"/contact"} className="orignBtn orgWBtn">
               <OrignBtn viewtxt="Contact" />
               </Link>
             </div>
             <div className={classes.rightArea}>
-              <h4>Contact Me</h4>
               <ul>
                 <li>
                   <a href="https://github.com/kjhto46" target="_blank"><span><img src="/layout/footer_icon01.png" /></span><p>https://github.com/kjhto46</p></a>
