@@ -17,7 +17,7 @@ export default async function Home() {
   
   return (
     <>
-      <title>안녕하세요?</title>
+      <title>권준희 포트폴리오</title>
       {/* <script src="../js/mainscript.js" defer /> */}
 
 
