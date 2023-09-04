@@ -1,13 +1,14 @@
 import "../common/css/sub.scss";
+import SubTit from "../components/SubTit";
 
 export default function About() {
   return (
     <>
       <title>About</title>
-      <div className="about">
+      <div className="sub about">
         <div className="inner">
           <div className="cont01">
-            <h2>about</h2>
+            <SubTit titTxt="About Me" />
             <div className="flexArea">
               <figure></figure>
               <div>
@@ -51,14 +52,14 @@ export default function About() {
           <div className="cont02">
             <figure></figure>
             <div>
-              <h3>Career List</h3>
+              <h3 className="poppins">Career List</h3>
               <ul>
                 <li>
                   <span>2021.04 - 2023.08</span>
                   <p>(주)이프론트 IT팀 대리</p>
                 </li>
                 <li>
-                  <spna>2020. 10 - 2021.04</spna>
+                  <span>2020. 10 - 2021.04</span>
                   <p>
                     하이미디어컴퓨터아카데미 UI/UX 반응형 웹디자인(웹퍼블리셔)
                     과정 수료

@@ -1,10 +1,17 @@
 export default function MainSkill(props) {
-   return(
-      <div className="sec03_compo">
-         <div>
-         <figure><img src={"/main/" + props.propsimg} alt={props.txtTit + "아이콘"} /></figure>
-         <h2>{props.txtTit}</h2>
-         </div>
+  return (
+    <div>
+      <figure>
+        <img src={props.propsimg + ".png"} alt={props.txtTit + "아이콘"} />
+      </figure>
+      <div>
+        <h2>{props.txtTit}</h2>
+        {props.txtSub ?
+        (<p>{props.txtSub}</p>)
+        :
+        null
+      }
       </div>
-      )
+    </div>
+  );
 }
