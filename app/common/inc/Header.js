@@ -33,11 +33,17 @@ export default function Header() {
     setDarkTheme(initialColorValue === "dark");
   }, []);
 
+  const ScrollTop = () => {
+    useEffect(() => {
+        window.scroll(0, 0);
+    }, []);
+  };
+
   return (
     <header className={classes.header}>
       <div className="inner">
         <h1>
-          <Link href={"/"}>Kwonjunhee</Link>
+          <a href={"/"}>Kwonjunhee</a>
         </h1>
         <nav>
           <ul>

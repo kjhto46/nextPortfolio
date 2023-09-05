@@ -18,10 +18,8 @@ export default async function Home() {
   return (
     <>
       <title>권준희 포트폴리오</title>
-      {/* <script src="../js/mainscript.js" defer /> */}
 
-
-      <main className={`${classes.title} main`}>
+      <main className="main">
         <Section01 />
         <Section02 />
         <Section03 />

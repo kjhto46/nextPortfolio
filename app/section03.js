@@ -76,7 +76,7 @@ export default function Section03() {
       <div className="inner">
         <div className="mainTit">
           <h2 className="poppins">Technology Use</h2>
-          <Link href={"/about"} className="orignBtn skyblue">
+          <Link href={"/skill"} className="orignBtn skyblue">
             <OrignBtn viewtxt="View About" />
           </Link>
         </div>

@@ -5,6 +5,9 @@ import SubTit from "../components/SubTit";
 export default function Skill() {
   return (
     <>
+    <div></div>
+    <title>Skill</title>
+
       <div className="sub skills">
         <div className="inner">
           <SubTit titTxt="Skills & Stack" />
@@ -21,9 +24,9 @@ export default function Skill() {
                 </li>
                 <li>
                   <MainSkill
-                    txtTit="HTML5"
+                    txtTit="CSS"
                     txtSub="크로스브라우징 시맨틱마크업을 준수합니다. 반응형/적응형 개발 경험, 애니메이션 활용"
-                    propsimg="/sub/skill_icon01"
+                    propsimg="/sub/skill_icon02"
                   /></li>
                 <li>
                   <MainSkill

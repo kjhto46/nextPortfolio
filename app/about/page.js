@@ -4,7 +4,9 @@ import SubTit from "../components/SubTit";
 export default function About() {
   return (
     <>
+      <div></div>
       <title>About</title>
+
       <div className="sub about">
         <div className="inner">
           <div className="cont01">
