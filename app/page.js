@@ -1,5 +1,4 @@
 import { connectDB } from "@/util/database";
-import classes from "./page.module.scss";
 import "./common/css/main.scss";
 import Section01 from "./section01";
 import Section02 from "./section02";
