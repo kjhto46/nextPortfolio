@@ -72,7 +72,7 @@ export default function Skill() {
                 <li>
                   <MainSkill
                     txtTit="PHP"
-                    txtSub="include 활용하여 페이지 간략하게 사용, 사용자 정의 함수를 활용하여 여러 기능을 구현한 경험이 있습니다."
+                    txtSub="include 활용하여 페이지 간략하게 사용, 사용자 정의 함수로 페이지에 연결시 활용하여 작업한 경험이 있습니다."
                     propsimg="/sub/skill_icon11"
                   />
                 </li>
@@ -88,6 +88,32 @@ export default function Skill() {
                     txtTit="Next.js"
                     txtSub="리액트(React) 기반의 서버 사이드 렌더링(SSR) 및 정적 사이트 생성(SSG) 프레임워크, 검색 엔진 최적화(SEO)를 개선하고 초기 로딩 속도를 최적화에 대해 생각하며 작업 했습니다."
                     propsimg="/sub/skill_icon13"
+                  />
+                </li>
+              </ol>
+            </li>
+            <li>
+              <h2>Version Control</h2>
+              <ol>
+                <li>
+                  <MainSkill
+                    txtTit="git"
+                    txtSub="분산 버전 관리 시스템으로, 소스 코드와 프로젝트 관리를 위해 사용됩니다. Git의 기본 명령어를 활용하여 저장소 생성, 복제, 커밋, 푸시, 풀 등을 수행할 수 있습니다."
+                    propsimg="/sub/skill_icon20"
+                  />
+                </li>
+                <li>
+                  <MainSkill
+                    txtTit="GitHub"
+                    txtSub="웹 기반 Git 리포지토리 호스팅 플랫폼으로, 소스 코드 관리와 협업을 지원합니다."
+                    propsimg="/sub/skill_icon21"
+                  />
+                </li>
+                <li>
+                  <MainSkill
+                    txtTit="Slack"
+                    txtSub="업무 및 팀 커뮤니케이션을 위한 클라우드 기반 메시징 플랫폼입니다. 실시간 채팅, 파일 공유, 채널 생성 및 관리, 멀티 팀 협업 등을 지원하여 협업을 효과적으로 수행합니다."
+                    propsimg="/sub/skill_icon22"
                   />
                 </li>
               </ol>
@@ -114,32 +140,6 @@ export default function Skill() {
                     txtTit="Figma"
                     txtSub=""
                     propsimg="/sub/skill_icon06"
-                  />
-                </li>
-              </ol>
-            </li>
-            <li>
-              <h2>Version Control</h2>
-              <ol>
-                <li>
-                  <MainSkill
-                    txtTit="git"
-                    txtSub=""
-                    propsimg="/sub/skill_icon20"
-                  />
-                </li>
-                <li>
-                  <MainSkill
-                    txtTit="GitHub"
-                    txtSub=""
-                    propsimg="/sub/skill_icon21"
-                  />
-                </li>
-                <li>
-                  <MainSkill
-                    txtTit="Slack"
-                    txtSub=""
-                    propsimg="/sub/skill_icon22"
                   />
                 </li>
               </ol>

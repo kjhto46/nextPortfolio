@@ -53,38 +53,45 @@ const circleVariants = [
   },
 ];
 
-export default function FileScroll({mainResult}){
+export default function FileScroll({ mainResult }) {
   return (
     <div className="mainProScroll">
       <div className="sticky">
-        {mainResult.map((a, i) => (
-          <motion.div
-            variants={fileVariants}
-            initial="start"
-            whileInView="end"
-            viewport={{ once: false, amount: 0.95 }}
-            className={`file file${i}`}
-            key={i}
-          >
-            <motion.div variants={circleVariants[i]} className="fileCon">
-              <div className="fileHead"></div>
-              <div className="flexAreabg"></div>
-              <div className="flexArea">
-              <figure style={{ backgroundImage: `url(${mainResult[i].wimg})` }}></figure>
-                <div className="txtArea">
-                  <h2>{mainResult[i].name}</h2>
-                  <ul>
-                    <li>{mainResult[i].responsive}</li>
-                    <li>{mainResult[i].wdate}</li>
-                    <li><a href={mainResult[i].wsite} target="_blank">페이지 이동</a></li>
-                  </ul>
-                </div>
-              </div>
-            </motion.div>
-          </motion.div>
-        ))}
+        {mainResult.map((a, i) => {
+            return (
+              <motion.div
+                variants={fileVariants}
+                initial="start"
+                whileInView="end"
+                viewport={{ once: false, amount: 0.95 }}
+                className={`file file${i}`}
+                key={i}
+              >
+                <motion.div variants={circleVariants[i]} className="fileCon">
+                  <div className="fileHead"></div>
+                  <div className="flexAreabg"></div>
+                  <div className="flexArea">
+                    <figure
+                      style={{ backgroundImage: `url(${mainResult[i].wimg})` }}
+                    ></figure>
+                    <div className="txtArea">
+                      <h2>{mainResult[i].name}</h2>
+                      <ul>
+                        <li>{mainResult[i].responsive}</li>
+                        <li>{mainResult[i].wdate}</li>
+                        <li>
+                          <a href={mainResult[i].wsite} target="_blank">
+                            페이지 이동
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </motion.div>
+              </motion.div>
+            );
+        })}
       </div>
     </div>
   );
-};
-
+}
