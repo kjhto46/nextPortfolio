@@ -15,14 +15,15 @@ export default async function Home() {
   })
   
   return (
-    <main className="main">
-
+    <>
       <title>권준희 포트폴리오</title>
 
+      <main className="main">
         <Section01 />
         <Section02 />
         <Section03 />
         <Section04 mainResult={mainResult} />
       </main>
+    </>
   );
 }
