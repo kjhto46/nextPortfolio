@@ -1,9 +1,12 @@
+import Footer from "@/app/common/inc/Footer";
+import Header from "@/app/common/inc/Header";
 import { connectDB } from "@/util/database";
 import { ObjectId } from "mongodb";
+import Link from "next/link";
 import { notFound, useRouter } from "next/navigation";
-import BackBtn from "../BackBtn";
 
 export default async function PortDetail(props) {
+  if(props.params.portId.toString('hex')){}
   const client = await connectDB;
   const db = client.db("portfolio");
   let portResult = await db
@@ -16,11 +19,12 @@ export default async function PortDetail(props) {
   } else {
     return (
       <>
-        <title>프로젝트 제목</title>
+      <Header />
+        <title>{portResult.ptitle}</title>
         <div className="portSub">
           <article className="visual">
-            <BackBtn />
-            <h2>프로젝트 제목</h2>
+            <Link href={'/portfolio'}>뒤로가기</Link>
+            <h2>{portResult.ptitle}</h2>
           </article>
           <article>
             <div className="inner">
@@ -42,6 +46,7 @@ export default async function PortDetail(props) {
             </div>
           </article>
         </div>
+        <Footer />
       </>
     );
   }

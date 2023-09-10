@@ -37,7 +37,7 @@ export default function Header() {
     <header className={classes.header}>
       <div className="inner">
         <h1>
-          <a href={"/"}>Kwonjunhee</a>
+          <Link href={"/"}>Kwonjunhee</Link>
         </h1>
         <nav>
           <ul>
