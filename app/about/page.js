@@ -1,3 +1,4 @@
+import "../common/css/sub.scss";
 import SubTit from "../components/SubTit";
 
 export default function About() {

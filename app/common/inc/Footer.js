@@ -12,7 +12,6 @@ import {
 } from "framer-motion";
 
 import Link from "next/link";
-import classes from "../css/Footer.module.scss";
 import OrignBtn from "@/app/components/OrignBtn";
 
 function Parallaxcloud({ children, baseVelocity = 100 }) {
@@ -63,7 +62,7 @@ function Parallaxcloud({ children, baseVelocity = 100 }) {
    * dynamically generated number of children.
    */
   return (
-    <motion.div className={classes.cloudScroll} style={{ x }}>
+    <motion.div className="cloudScroll" style={{ x }}>
       {children}
       {children}
       {children}
@@ -79,7 +78,7 @@ export default function Footer() {
     });
   };
   return (
-    <footer className={`poppins ${classes.footer}`}>
+    <footer className={`poppins footer`}>
       <Parallaxcloud baseVelocity={0.5}>
         <div>
           <span></span>
@@ -94,15 +93,15 @@ export default function Footer() {
         </div>
       </Parallaxcloud>
       <div>
-        <div className={classes.inner}>
-          <div className={classes.footerLink}>
-            <div className={classes.leftArea}>
+        <div className="inner">
+          <div className="footerLink">
+            <div className="leftArea">
               <h2>Contact Me</h2>
               <Link href={"/contact"} className="orignBtn orgWBtn">
               <OrignBtn viewtxt="Contact" />
               </Link>
             </div>
-            <div className={classes.rightArea}>
+            <div className="rightArea">
               <ul>
                 <li>
                   <a href="https://github.com/kjhto46" target="_blank"><span><img src="/layout/footer_icon01.png" /></span><p>https://github.com/kjhto46</p></a>
@@ -113,7 +112,7 @@ export default function Footer() {
               </ul>
             </div>
           </div>
-          <div className={classes.copyright}>
+          <div className="copyright">
             <p>Copyright 2023 kwonjunhee All Right Reserved</p>
             <div onClick={scrollToTop}>
               <p>Go To Top</p>
@@ -128,7 +127,7 @@ export default function Footer() {
                   <g clipPath="url(#clip0_1023_2953)">
                     <path
                       d="M10 4.76L6.31 1.24L5 0L3.69 1.24L0 4.76L1.31 6L4 3.44V12H6V3.44L8.69 6L10 4.76Z"
-                      className={classes.fillColor}
+                      className="fillColor"
                     />
                   </g>
                 </svg>

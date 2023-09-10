@@ -1,4 +1,4 @@
-import "./common/css/globals.scss";
+import "./globals.scss";
 
 export default function loading() {
    return(

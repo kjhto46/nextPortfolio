@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 
 import Link from "next/link";
-import classes from "../css/Header.module.scss";
 
 export default function Header() {
   const [darkTheme, setDarkTheme] = useState(undefined);
@@ -34,7 +33,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={classes.header}>
+    <header className="header">
       <div className="inner">
         <h1>
           <Link href={"/"}>Kwonjunhee</Link>
@@ -57,13 +56,11 @@ export default function Header() {
 
           <div
             onClick={handleToggle}
-            className={`${classes.colorModeBtn} ${
-              darkTheme ? classes.darkmode : classes.lightmode
-            }`}
+            className={`colorModeBtn ${darkTheme ? "darkmode" : "lightmode"}`}
           >
             <span></span>
               <svg
-              className={classes.darkSvg}
+              className="darkSvg"
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
@@ -83,7 +80,7 @@ export default function Header() {
                 </defs>
               </svg>
               <svg
-              className={classes.lightSvg}
+              className="lightSvg"
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"

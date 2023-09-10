@@ -110,6 +110,12 @@
 					padding: 0 8px;
 
 					h2 { font-size: 20px; font-weight: 600; line-height: 1.5; color: #1C1C1C; }
+					p { margin: 4px 0 12px; font-size: 16px; font-weight: 400; line-height: 1.5; color: #585858; }
+					ol {
+						display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: center;
+
+						li { display: flex; justify-content: center; align-items: center; margin: 0 8px 8px 0; padding: 8px 16px; font-size: 12px; font-weight: 400; color: #77B3BA; border-radius: 28px; border: 1px solid #77B3BA; background: #E7F0EE; }
+					}
 				}
 			}
 		}

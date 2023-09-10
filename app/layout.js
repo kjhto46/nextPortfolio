@@ -1,6 +1,4 @@
-import "./common/css/globals.scss";
-import "./common/css/main.scss";
-import "./common/css/sub.scss";
+import "./globals.scss";
 import LayoutView from "./LayoutView";
 // import localFont from "next/font/local";
 

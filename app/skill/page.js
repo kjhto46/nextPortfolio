@@ -1,3 +1,4 @@
+import "../common/css/sub.scss";
 import MainSkill from "../components/MainSkill";
 import SubTit from "../components/SubTit";
 

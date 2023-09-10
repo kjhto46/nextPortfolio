@@ -1,3 +1,4 @@
+import "./common/css/main.scss";
 import { connectDB } from "@/util/database";
 import Section01 from "./section01";
 import Section02 from "./section02";

@@ -1,4 +1,8 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css");
+
+
 
 /*============================================================================================================
     리셋
@@ -36,10 +40,6 @@ body[data-theme="dark"] {
     --colorModeBtnColor3:#ED7B34;
 
 }
-
-// 폰트
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.8/dist/web/static/pretendard-dynamic-subset.css");
 
 *{outline:0!important; box-sizing:border-box;}
 html,body,h1,h2,h3,h4,h5,h6,div,p,blockquote,pre,code,address,ul,ol,li,menu,nav,section,article,aside,dl,dt,dd,table,thead,tbody,tfoot,label,caption,th,td,form,fieldset,legend,hr,input,button,textarea,object,figure,figcaption {margin:0;padding:0;}
@@ -150,6 +150,110 @@ img,svg {width:auto; max-width:100%;}
     }
   }
 }
+
+// 해더
+.header {
+  position: fixed; left: 0; right: 0; top: 0; height: var(--header-height-); z-index:8000;
+
+  > div { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1600px; margin: 0 auto; }
+  h1 a { display: flex; justify-content: center; align-items: center; height: var(--header-height-); font-size: 20px; color: var(--contantColor01); }
+  nav {
+    display: flex; justify-content: flex-end; align-items: center;
+
+    ul {
+      display: flex; align-items: center;
+
+      li a { padding: 0 24px; line-height: var(--header-height-); font-size: 16px; color: var(--contantColor01); }
+    }
+  }
+  .colorModeBtn {
+    position: relative; display: flex; width: 64px; height: 32px; margin: 0 0 0 24px; padding: 4px; background: var(--colorModeBtnBg); border-radius: 16px; transition: background 0.3s linear; cursor: pointer;
+
+    span { position: absolute; top: calc(50% - 12px); display: block; width: 24px; height: 24px; border-radius: 100%; background: var(--colorModeBtnColor); transition: left 0.3s linear; z-index: 2; }
+    svg {
+      position: absolute; top: calc(50% - 10px); width: 20px; height: 20px; transform: rotate(-180deg); opacity: 0; transition: all 0.3s ease;
+
+      &.darkSvg { left: 8px; }
+      &.lightSvg { right: 8px; }
+    }
+    &.lightmode {
+      span { left: 4px; }
+      svg {
+        &.darkSvg { transform: rotate(-180deg); opacity: 0; }
+        &.lightSvg { transform: rotate(0); opacity: 1; }
+      }
+    }
+    &.darkmode {
+      span { left: calc(100% - 28px); }
+      svg {
+        &.darkSvg { transform: rotate(0); opacity: 1; }
+        &.lightSvg { transform: rotate(-180deg); opacity: 0; }
+      }
+    }
+  }
+}
+// 푸터
+.footer {
+	margin:-8.9vw 0 0; padding:8.9vw 0 0; overflow:hidden;
+    > div {background:#192227;}
+	.inner { position: relative; max-width: 1240px; margin: 0 auto; padding: 0 20px; z-index: 10; }
+	.footerLink {display:flex; flex-direction:row; flex-wrap:wrap; align-items:flex-end; padding: 80px 0 100px; 
+		.leftArea {width:68%;
+			h2 {margin:0 0 40px; font-size:56px; font-weight:700; color:#fff;}
+		}
+		.rightArea {width:32%;
+			h4 {font-size:20px; font-weight:700; color:#fff;}
+			ul {margin:16px 0 0;
+				li {margin:0 0 10px;
+					&:last-child {margin:0;}
+					a {display:flex; flex-direction:row; justify-content:flex-start; align-items:center; width:100%; min-height:40px; padding:6px 15px; font-size:14px; font-weight:400; color:#fff; border:1px solid rgba(255,255,255,0.3); border-radius:40px;
+						span {width:24px; margin:0 10px 0 0;}
+						p {width:calc(100% - 34px);}
+					}
+				}
+			}
+		}
+	}
+	.copyright {
+		display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: space-between; align-items: center; height: 48px; border-top: 1px solid rgba($color: #fff, $alpha: 0.3);
+		p { font-size: 14px; color: #969696; }
+		div {
+			display: flex; flex-direction: row; flex-wrap: nowrap; justify-content: flex-start; align-items: center; cursor: pointer;
+
+			p { font-size: 14px; font-weight: 400; color: #fff; }
+			span {
+				display: flex; justify-content: center; align-items: center; width: 24px; height: 24px; margin: 0 0 0 8px; background: #fff; border-radius: 50%;
+
+				svg {
+					.fillColor { fill: #192227; }
+				}
+			}
+		}
+	}
+}
+
+	// 구름 디자인
+	.cloudScroll {
+		display:flex; white-space:nowrap; flex-wrap:nowrap; width: max-content; z-index: 1;
+
+		div {
+			position: relative; width: 100vw;
+
+			span {
+				position: absolute; width:17.8vw; height:17.8vw; background: #192227; border-radius: 50%;
+
+				&:nth-child(1) {left:-3.125vw; top:-3.95vw;}
+				&:nth-child(2) {left:8.5vw; top:-8.6vw;}
+				&:nth-child(3) {left:20.4vw; top:-6.25vw;}
+				&:nth-child(4) {left:34.7vw; top:-8.02vw;}
+				&:nth-child(5) {left:42.7vw; top:-5.05vw;}
+				&:nth-child(6) {left:52.76vw; top:-2.6vw;}
+				&:nth-child(7) {left:64.84vw; top:-3.38vw;}
+				&:nth-child(8) { left:75.52vw; top:-6.25vw;}
+				&:nth-child(9) { left: 87vw; top:-1.45vw;}
+			}
+		}
+	}
 
 // 로딩중
 .loadingDiv {position: fixed; left: 0; right: 0; top: 0; bottom:0; display:flex; justify-content:center; align-items:center; background:#fff0de; z-index:9000;}
