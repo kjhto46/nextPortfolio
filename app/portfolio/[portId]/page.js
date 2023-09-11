@@ -23,7 +23,7 @@ export default async function PortDetail(props) {
         <Header />
         <title>{portResult.ptitle}</title>
         <div className="portSub">
-          <article className="visual">
+          <article className="visual" style={{ background: `url(${portResult.img01}) no-repeat center/cover` }}>
             <div className="inner">
               <Link href={"/portfolio"} className="poppins">
                 Back to List
