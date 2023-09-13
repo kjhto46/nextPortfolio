@@ -39,7 +39,7 @@ export default function Header() {
           <Link href={"/"}>Kwonjunhee</Link>
         </h1>
         <nav>
-          <ul>
+          <ul className="gnb">
             <li>
               <Link href={"/about"}>About</Link>
             </li>

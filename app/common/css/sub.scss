@@ -214,7 +214,7 @@
 				height: 440px; overflow-y: scroll;
 
 				&::-webkit-scrollbar { width: 8px; }
-				&::-webkit-scrollbar-thumb { border: 1px solid #192227; background: #FFF; background-clip: padding-box; border-radius: 8px; }
+				&::-webkit-scrollbar-thumb {min-height:50px; border: 1px solid #192227; background: #FFF; background-clip: padding-box; border-radius: 8px; }
 				&::-webkit-scrollbar-track { width: 8px; border-radius: 8px; border: 1px solid #DDD; background: #fff; }
 				ul {
 					height: 100%; width: calc(100% - 40px);
