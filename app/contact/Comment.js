@@ -34,7 +34,11 @@ export default function ShowComment() {
               </li>
             ))
           ) : (
-            <li>로딩중</li>
+            <>
+            <li>Loading</li>
+            <li>Loading</li>
+            <li>Loading</li>
+            </>
           )}
         </ul>
       </div>

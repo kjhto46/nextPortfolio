@@ -220,7 +220,7 @@
 					height: 100%; width: calc(100% - 40px);
 
 					li {
-						display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: center; margin: 0 0 12px; padding:10px 30px; background:rgba(255,255,255,0.3); border: 2px solid #fff; border-radius: 50px;
+						display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: center; min-height:62.5px; margin: 0 0 12px; padding:10px 30px; background:rgba(255,255,255,0.3); border: 2px solid #fff; border-radius: 50px;
 						&:last-child {margin:0;}
 						h3 {position:relative; width:140px; padding:0 21px 0 0; font-size:14px; font-weight:600; color:#1C1C1C;
 							&::after {content:''; position: absolute; right:10px; top:calc(50% - 6px); width:1px; height:12px; background:#ddd;}
