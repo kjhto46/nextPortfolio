@@ -158,6 +158,57 @@ svg { transition:all 0.3s ease;}
   }
 }
 
+@media all and (max-width:1024px) {
+  .orignBtn {
+    width: 150px; height: 42px; padding: 0 20px;
+  
+    &::before { content: ''; position: absolute; top: 2px; left: 2px; right: -2px; bottom: -2px; width: 100%; height: 100%; border-radius: 21px; z-index: 1; transition: all 0.3s ease; }
+    &::after { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: calc(100% - 4px); height: calc(100% - 4px); border-radius: 24px; border: 2px solid; z-index: 2; }
+    p {font-size: 13.5px;}
+    span {
+      width: 6px; height: 6px;
+    }
+    &:hover {
+      padding: 0 6px 0 20px;
+  
+      &::before { top: 4px; left: 4px; right: -4px; bottom: -4px; }
+      span {
+        width: 32px; height: 32px;
+  
+        svg {
+          width: 12.5px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width:768px) {
+  .orignBtn {
+    width: 28vw; height: 8.6vw; padding: 0 3vw;
+  
+    &::before {top: 0.4vw; left: 0.4vw; right: -0.4vw; bottom: -0.4vw; border-radius: 8.6vw;}
+    &::after {width: calc(100% - 0.8vw); height: calc(100% - 0.8vw); border-radius: 8.6vw; border:0.4vw solid;}
+    p {font-size:3vw;}
+    span {
+      width:1.2vw; height:1.2vw;
+    }
+    &:hover {
+      padding: 0 1vw 0 3vw;
+  
+      &::before { top: 0.8vw; left: 0.8vw; right: -0.8vw; bottom: -0.8vw; }
+      span {
+        width: 7.2vw; height: 7.2vw;
+  
+        svg {
+          width: 2.5vw;
+        }
+      }
+    }
+  }
+}
+
+
 // 해더
 .header {
   position: fixed; left: 0; right: 0; top: 0; height: var(--header-height-); z-index:8000;
@@ -239,27 +290,26 @@ svg { transition:all 0.3s ease;}
 
 @media all and (max-width:768px){
   .header {
-    h1 a {font-size: 3vw;}
     nav {
       .gnb {display:none;}
     }
-    .colorModeBtn {
-      position: relative; display: flex; width: 11vw; height: 5.6vw; margin: 0; padding:0.6vw; border-radius:6vw;
+    // .colorModeBtn {
+    //   position: relative; display: flex; width: 11vw; height: 5.6vw; margin: 0; padding:0.6vw; border-radius:6vw;
   
-      span {top: calc(50% - 2.2vw); width: 4.4vw; height:4.4vw;}
-      svg {
-        top: calc(50% - 2vw); width: 4vw; height: 4vw;
+    //   span {top: calc(50% - 2.2vw); width: 4.4vw; height:4.4vw;}
+    //   svg {
+    //     top: calc(50% - 2vw); width: 4vw; height: 4vw;
   
-        &.darkSvg { left: 1.2vw; }
-        &.lightSvg { right: 1.2vw; }
-      }
-      &.lightmode {
-        span { left: 0.6vw; }
-      }
-      &.darkmode {
-        span { left: calc(100% - 5vw); }
-      }
-    }
+    //     &.darkSvg { left: 1.2vw; }
+    //     &.lightSvg { right: 1.2vw; }
+    //   }
+    //   &.lightmode {
+    //     span { left: 0.6vw; }
+    //   }
+    //   &.darkmode {
+    //     span { left: calc(100% - 5vw); }
+    //   }
+    // }
   }
 
 }
