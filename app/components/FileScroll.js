@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useDarkMode } from "../useDarkMode";
 
 const fileVariants = {
   start: {},
@@ -54,6 +55,7 @@ const circleVariants = [
 ];
 
 export default function FileScroll({ mainResult }) {
+  const [mode] = useDarkMode();
   return (
     <div className="mainProScroll">
       <div className="sticky">
@@ -68,7 +70,7 @@ export default function FileScroll({ mainResult }) {
                 key={i}
               >
                 <motion.div variants={circleVariants[i]} className="fileCon">
-                  <div className="fileHead"></div>
+                  <div className={`fileHead ${mode}`}></div>
                   <div className="flexAreabg"></div>
                   <div className="flexArea">
                     <figure
