@@ -244,14 +244,14 @@ svg { transition:all 0.3s ease;}
       &.darkSvg { left: 8px; }
       &.lightSvg { right: 8px; }
     }
-    &.lightmode {
+    &.light {
       span { left: 4px; }
       svg {
         &.darkSvg { transform: rotate(-180deg); opacity: 0; }
         &.lightSvg { transform: rotate(0); opacity: 1; }
       }
     }
-    &.darkmode {
+    &.dark {
       span { left: calc(100% - 28px); }
       svg {
         &.darkSvg { transform: rotate(0); opacity: 1; }
@@ -279,14 +279,14 @@ svg { transition:all 0.3s ease;}
         &.darkSvg { left: 6px; }
         &.lightSvg { right: 6px; }
       }
-      &.lightmode {
+      &.light {
         span { left: 4px; }
         svg {
           &.darkSvg { transform: rotate(-180deg); opacity: 0; }
           &.lightSvg { transform: rotate(0); opacity: 1; }
         }
       }
-      &.darkmode {
+      &.dark {
         span { left: calc(100% - 24px); }
         svg {
           &.darkSvg { transform: rotate(0); opacity: 1; }
