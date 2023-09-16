@@ -10,43 +10,53 @@
 ============================================================================================================*/
 
 body, body[data-theme="light"]{
-    --color0-f:#000;
-    --colorf-0:#fff;
+  // 배경색
+  --color-FFF-1C1C1C:#FFF;
+  --color-1C1C1C-FFF:#1C1C1C;
+  --color-ED7B34-FFF:#ED7B34;
 
-    --contantColor01:#1c1c1c;
+  // color to white
+  --color-1C1C1C-FFF:#1C1C1C;
+  --color-ED7B34-FFF:#ED7B34;
 
-    --colorModeBtnBg:#ED7B34;
-    --colorModeBtnColor:#192227;
+    // orignBtn색
+  --colorModeBtnBg:#ED7B34;
+  --colorModeBtnColor:#192227;
 
-    --colorModeBtnBg2:#77B3BA;
-    --colorModeBtnColor2:#192227;
+  --colorModeBtnBg2:#77B3BA;
+  --colorModeBtnColor2:#192227;
 
-    --colorModeBtnBg3:#ED7B34;
-    --colorModeBtnColor3:#fff;
+  --colorModeBtnBg3:#ED7B34;
+  --colorModeBtnColor3:#fff;
 }
 
 body[data-theme="dark"] {
-    --color0-f:#fff;
-    --colorf-0:#000;
-    
-    --contantColor01:#fff;
+  // 배경색
+  --color-FFF-1C1C1C:#1C1C1C;
+  --color-1C1C1C-FFF:#FFF;
+  --color-ED7B34-FFF:#FFF;
 
-    --colorModeBtnBg:#192227;
-    --colorModeBtnColor:#ED7B34;
+  // color to white
+  --color-1C1C1C-FFF:#FFF;
+  --color-ED7B34-FFF:#FFF;
 
-    --colorModeBtnBg2:#192227;
-    --colorModeBtnColor2:#77B3BA;
+    // orignBtn색
+    --colorModeBtnBg:#121212;
+    --colorModeBtnColor:#fff;
 
-    --colorModeBtnBg3:#fff;
-    --colorModeBtnColor3:#ED7B34;
+    --colorModeBtnBg2:#121212;
+    --colorModeBtnColor2:#fff;
+
+    --colorModeBtnBg3:#121212;
+    --colorModeBtnColor3:#fff;
 
 }
 
 *{outline:0!important; box-sizing:border-box;}
 html,body,h1,h2,h3,h4,h5,h6,div,p,blockquote,pre,code,address,ul,ol,li,menu,nav,section,article,aside,dl,dt,dd,table,thead,tbody,tfoot,label,caption,th,td,form,fieldset,legend,hr,input,button,textarea,object,figure,figcaption {margin:0;padding:0;}
 html,body{width:100%;}
-body{width:100%; transition:background 0.3s ease; background:var(--colorf-0);min-width:320px; -ms-text-size-adjust:100%;text-size-adjust:100%;-webkit-text-size-adjust:100%;word-wrap:break-word;word-break:keep-all;}
-body,input,select,textarea,button{border:none;font-size:12px;font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;color:var(--color0-f); transition:all 0.3s ease;}
+body{width:100%; transition:background 0.3s ease; background:var(--color-FFF-1C1C1C); min-width:320px; -ms-text-size-adjust:100%;text-size-adjust:100%;-webkit-text-size-adjust:100%;word-wrap:break-word;word-break:keep-all;}
+body,input,select,textarea,button{border:none;font-size:12px;font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif; color:var(--color-1C1C1C-FFF); transition:all 0.3s ease;}
 ul,ol,li{list-style:none;}
 table{width:100%;border-spacing:0;border-collapse:collapse;}
 img,fieldset{width:100%;border:0;}
@@ -55,12 +65,12 @@ label,img,input,select,textarea,button{vertical-align:middle;}
 .hide,caption,legend{line-height:0;font-size:1px;overflow:hidden;}
 hr{display:none;}
 main,header,section,nav,footer,aside,article,figure{display:block;}
-a{color:var(--color0-f);  transition:all 0.3s ease; text-decoration:none;}
+a{color:var(--color-1C1C1C-FFF); text-decoration:none;}
 img,svg {width:auto; max-width:100%;}
 svg { transition:all 0.3s ease;}
 /* Selection */
-::-moz-selection {background:rgba(0,0,0,0.5);}
-::selection {background:rgba(0,0,0,0.5);}
+::-moz-selection {background:rgba(237,123,52,0.5);}
+::selection {background:rgba(237,123,52,0.5);}
 
 .poppins {font-family: 'Poppins', sans-serif;}
 
@@ -214,20 +224,20 @@ svg { transition:all 0.3s ease;}
   position: fixed; left: 0; right: 0; top: 0; height: var(--header-height-); z-index:8000;
 
   > div { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1600px; margin: 0 auto; }
-  h1 a { display: flex; justify-content: center; align-items: center; height: var(--header-height-); font-size: 20px; color: var(--contantColor01); }
+  h1 a { display: flex; justify-content: center; align-items: center; height: var(--header-height-); font-size: 20px; color: var(--color-1C1C1C-FFF); }
   nav {
     display: flex; justify-content: flex-end; align-items: center;
 
     .gnb {
       display: flex; align-items: center;
 
-      li a {display:block; padding: 0 24px; line-height: var(--header-height-); font-size: 16px; color: var(--contantColor01); }
+      li a {display:block; padding: 0 24px; line-height: var(--header-height-); font-size: 16px; color: var(--color-1C1C1C-FFF); }
     }
   }
   .colorModeBtn {
-    position: relative; display: flex; width: 64px; height: 32px; margin: 0 0 0 24px; padding: 4px; background: var(--colorModeBtnBg); border-radius: 16px; transition: background 0.3s linear; cursor: pointer;
+    position: relative; display: flex; width: 64px; height: 32px; margin: 0 0 0 24px; padding: 4px; background: var(--color-ED7B34-FFF); border-radius: 16px; transition: background 0.3s linear; cursor:pointer;
 
-    span { position: absolute; top: calc(50% - 12px); display: block; width: 24px; height: 24px; border-radius: 100%; background: var(--colorModeBtnColor); transition: left 0.3s linear; z-index: 2; }
+    span { position: absolute; top: calc(50% - 12px); display: block; width: 24px; height: 24px; border-radius: 100%; background:#1E1E1E; transition: left 0.3s linear; z-index: 2; }
     svg {
       position: absolute; top: calc(50% - 10px); width: 20px; height: 20px; transform: rotate(-180deg); opacity: 0; transition: all 0.3s ease;
 
@@ -317,7 +327,7 @@ svg { transition:all 0.3s ease;}
 // 푸터
 .footer {
 	margin:-8.9vw 0 0; padding:8.9vw 0 0; overflow:hidden;
-    > div {background:#192227; transition:all 0.3s ease;}
+    > div {background:#192227; transition:background 0.3s ease;}
 	.inner { position: relative; max-width: 1240px; margin: 0 auto; padding: 0 20px; z-index: 10; }
 	.footerLink {display:flex; flex-direction:row; flex-wrap:wrap; align-items:flex-end; padding: 80px 0 100px; 
 		.leftArea {width:68%;
