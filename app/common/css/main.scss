@@ -1,7 +1,7 @@
 .section01 {
   position: relative; height: 780px; background:var(--color-ED7B34-1E1E1E); overflow: hidden; transition:background 0.3s ease;
 
-  &::before { content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 120vw; height: 120vw; background:var(--color-ED7B34-292929); border-radius: 100% / 25%; z-index: 2; transition:background 0.3s ease;}
+  &::before { content: ""; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%); width: 120vw; height: 120vw; background:var(--color-FFF0DE-292929); border-radius: 100% / 25%; z-index: 2; transition:background 0.3s ease;}
   &::after { content: ""; position: absolute; left: 50%; top: calc(100% - 8vw); transform: translateX(-50%); width: 350vw; height: 350vw; background: var(--color-FFF-121212); border-radius: 100%; z-index: 1; transition:background 0.3s ease;}
   .txtArea {
     position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; max-width: 1440px; padding: 0 20px; text-align: center; z-index: 5;
