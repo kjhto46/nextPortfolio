@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef } from "react";
 
-export default function Section01() {
+export default function Section01({ darkTheme }) {
   const section01 = useRef(null);
 
   // 이전 스크립트의 동작을 담당하는 useEffect Hook
@@ -67,7 +67,7 @@ export default function Section01() {
   }, []);
 
   return (
-    <section ref={section01} id="section01" className="section section01">
+    <section ref={section01} id="section01" className={`section section01 ${darkTheme ? "darkmode" : "lightmode"}`}>
       <div className="txtArea">
         <h2>
           KW<span>O</span>N JUN HEE, P<span>O</span>RTF<span>O</span>LI

@@ -220,13 +220,13 @@
 					height: 100%; width: calc(100% - 40px);
 
 					li {
-						display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: center; min-height:62.5px; margin: 0 0 12px; padding:10px 30px; background:rgba(255,255,255,0.3); border: 2px solid #fff; border-radius: 50px;
+						display: flex; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; align-items: center; min-height:66px; margin: 0 0 12px; padding:10px 30px; background:rgba(255,255,255,0.3); border: 2px solid #fff; border-radius: 33px;
 						&:last-child {margin:0;}
 						h3 {position:relative; width:140px; padding:0 21px 0 0; font-size:14px; font-weight:600; color:#1C1C1C;
 							&::after {content:''; position: absolute; right:10px; top:calc(50% - 6px); width:1px; height:12px; background:#ddd;}
 						}
 						p {width:calc(100% - 140px); font-size:15px; font-weight:500; color:#1c1c1c;}
-						span { width: 100%; margin:6px 0 0; font-size:12px; color:#666;}
+						span { width: 100%; margin:9px 0 0; font-size:12px; color:#666;}
 					}
 				}
 			}

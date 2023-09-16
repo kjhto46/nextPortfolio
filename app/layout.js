@@ -69,11 +69,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="ko-KR" /*className={myFont.className} */>
       <body>
-        {/* <script
+        <script
           dangerouslySetInnerHTML={{
             __html: themeInitializerScript,
           }}
-        ></script> */}
+        ></script>
         <LayoutView>
         {children}
         </LayoutView>
