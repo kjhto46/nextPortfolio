@@ -3,15 +3,22 @@ import Link from "next/link";
 
 import { useDarkMode } from "@/app/useDarkMode";
 import { useEffect, useState } from "react";
+import { usePathname } from 'next/navigation';
 
 export default function Header() {
   const [mode, toggleTheme] = useDarkMode();
+  const pathname = usePathname();
+
 
   const [toggleTg, setToggleTg] = useState(false);
 
   const handleToggleTg = () => {
     setToggleTg(!toggleTg);
   };
+
+  useEffect(() => {
+    setToggleTg(false); // 페이지 이동 또는 컴포넌트 마운트 시 toggleTg 값을 false로 변경
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = (event) => {
@@ -30,10 +37,6 @@ export default function Header() {
       document.body.style.overflow = ""; // 컴포넌트 언마운트 시 원래 상태로 복원
     };
   }, [toggleTg]);
-
-  const handleLinkClick = () => {
-    setToggleTg(false);
-  };
 
   return (
     <header className={`header ${toggleTg ? "toggle" : ""}`}>
@@ -164,16 +167,16 @@ export default function Header() {
         </div>
         <ul>
           <li>
-            <Link href={"/about"} onClick={handleLinkClick}>About</Link>
+            <Link href={"/about"}>About</Link>
           </li>
           <li>
-            <Link href={"/skill"} onClick={handleLinkClick}>Skill</Link>
+            <Link href={"/skill"}>Skill</Link>
           </li>
           <li>
-            <Link href={"/portfolio"} onClick={handleLinkClick}>Portfolio</Link>
+            <Link href={"/portfolio"}>Portfolio</Link>
           </li>
           <li>
-            <Link href={"/contact"} onClick={handleLinkClick}>Contact</Link>
+            <Link href={"/contact"}>Contact</Link>
           </li>
         </ul>
       </div>
