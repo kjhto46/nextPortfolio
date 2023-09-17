@@ -206,7 +206,7 @@
   
         figure {
           &:nth-child(1) { right:53vw; top:26vw; width:40vw; padding:20vw 0;}
-          &:nth-child(2) { right:23vw; top:48.5vw; width: 48vw; padding:24% 0;}
+          &:nth-child(2) { right:23vw; top:48.5vw; width: 48vw; padding:24vw 0;}
           &:nth-child(3) { right:0; top: 0; width:60vw; padding:30vw 0;}
   
         }
@@ -324,7 +324,6 @@
         .fileCon {
           .fileHead {
             background-image:url('/main/sec04_head01.png');
-            &.dark {background-image:url('/main/sec04_head01_D.png');}
           }
           .flexArea { background:var(--color-sec04F1); }
         }
@@ -335,7 +334,6 @@
         .fileCon {
           .fileHead {
             background-image:url('/main/sec04_head02.png');
-            &.dark {background-image:url('/main/sec04_head02_D.png');}
           }
           .flexArea { background:var(--color-sec04F2); }
         }
@@ -346,12 +344,22 @@
         .fileCon {
           .fileHead {
             background-image:url('/main/sec04_head03.png');
-            &.dark {background-image:url('/main/sec04_head03_D.png');}
           }
           .flexArea { background:var(--color-sec04F3); }
         }
       }
     }
+  }
+}
+body[data-theme="dark"] .section04 .mainProScroll .file{
+  &.file0 .fileCon .fileHead {
+    background-image:url('/main/sec04_head01_D.png');
+  }
+  &.file1 .fileCon .fileHead {
+    background-image:url('/main/sec04_head02_D.png');
+  }
+  &.file2 .fileCon .fileHead {
+    background-image:url('/main/sec04_head03_D.png');
   }
 }
 
@@ -411,10 +419,10 @@
           }
           .flexAreabg {left:1.5vw; right:-1.5vw; top:10.5vw; bottom:-1.5vw; height:calc(100% - 9.8vw); border-radius:0 3.6vw 3.6vw 3.6vw;}
           .flexArea {
-            display:block; width: 100%; height: calc(100% - 9.8vw); padding:4vw; border-radius: 0 3.6vw 3.6vw 3.6vw; border: 0.4vw solid var(--color-000-FFF);
+            display:flex; flex-direction: column; justify-content: space-between; align-items: stretch; width: 100%; height: calc(100% - 9.8vw); padding:4vw; border-radius: 0 3.6vw 3.6vw 3.6vw; border: 0.4vw solid var(--color-000-FFF);
 
             figure {width:100%; height:50%; border-radius:3vw;}
-            .txtArea {width:100%; margin:6vw 0 0; padding:0;
+            .txtArea {width:100%; margin:auto 0; padding:0;
               h2 {font-size:4vw;}
               ul {margin:2.2vw 0 auto;
                 li {padding:1.2vw 0; font-size:2.8vw;

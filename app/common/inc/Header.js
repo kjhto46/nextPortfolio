@@ -2,12 +2,41 @@
 import Link from "next/link";
 
 import { useDarkMode } from "@/app/useDarkMode";
+import { useEffect, useState } from "react";
 
 export default function Header() {
   const [mode, toggleTheme] = useDarkMode();
 
+  const [toggleTg, setToggleTg] = useState(false);
+
+  const handleToggleTg = () => {
+    setToggleTg(!toggleTg);
+  };
+
+  useEffect(() => {
+    const handleScroll = (event) => {
+      if (toggleTg) {
+        event.preventDefault();
+        document.body.style.overflow = "hidden";
+      } else {
+        document.body.style.overflow = ""; // 원래 상태로 복원
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      document.body.style.overflow = ""; // 컴포넌트 언마운트 시 원래 상태로 복원
+    };
+  }, [toggleTg]);
+
+  const handleLinkClick = () => {
+    setToggleTg(false);
+  };
+
   return (
-    <header className="header">
+    <header className={`header ${toggleTg ? "toggle" : ""}`}>
       <div className="inner">
         <h1>
           <Link href={"/"}>Kwonjunhee</Link>
@@ -117,7 +146,36 @@ export default function Header() {
               </g>
             </svg>
           </div>
+
+          <div
+            onClick={handleToggleTg}
+            className={`toggle ${toggleTg ? "active" : ""}`}
+          >
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
         </nav>
+      </div>
+      <div className={`tgbox ${toggleTg ? "active" : ""}`}>
+        <div onClick={handleToggleTg} className="closeToggle">
+          <span></span>
+          <span></span>
+        </div>
+        <ul>
+          <li>
+            <Link href={"/about"} onClick={handleLinkClick}>About</Link>
+          </li>
+          <li>
+            <Link href={"/skill"} onClick={handleLinkClick}>Skill</Link>
+          </li>
+          <li>
+            <Link href={"/portfolio"} onClick={handleLinkClick}>Portfolio</Link>
+          </li>
+          <li>
+            <Link href={"/contact"} onClick={handleLinkClick}>Contact</Link>
+          </li>
+        </ul>
       </div>
     </header>
   );
