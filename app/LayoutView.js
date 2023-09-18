@@ -5,6 +5,7 @@ import Header from "./common/inc/Header";
 import Footer from "./common/inc/Footer";
 import { useEffect, useState } from "react";
 
+
 export default function LayoutView({ children }) {
   const pathname = usePathname();
   if (typeof window === undefined) {
@@ -35,6 +36,7 @@ export default function LayoutView({ children }) {
   if (!showHeaderFooter) {
     return (
       <>
+
         <Header />
         {children}
         <Footer />
