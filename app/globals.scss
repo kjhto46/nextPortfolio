@@ -19,13 +19,17 @@ body, body[data-theme="light"]{
 
   // white to color
   --color-FFF-1C1C1C:#FFF;
+  --color-FFF-1E1E1E:#FFF;
   --color-FFF-121212:#FFF;
   --color-FFF-B3B3B3:#FFF;
+  --color-FFF-444:#FFF;
+  --color-FFF-717171:#FFF;
   // color to white
   --color-000-FFF:#000;
   --color-1C1C1C-FFF:#1C1C1C;
   --color-192227-FFF:#192227;
   --color-ED7B34-FFF:#ED7B34;
+  --color-585858-FFF:#585858;
   // main
   --color-FFF0DE-292929:#FFF0DE;
   --color-ED7B34-292929:#ED7B34;
@@ -37,6 +41,18 @@ body, body[data-theme="light"]{
   --color-sec04F1:#FFDDA1;
   --color-sec04F2:#AECDE7;
   --color-sec04F3:#8FC49E;
+  // sub
+  --color-subBg:linear-gradient(180deg, #ffefde 0%, #f1f6f5 100%);
+  --color-1C1C1C-383838:#1C1C1C;
+  --color-1C1C1C-BBB:#1C1C1C;
+  --color-192227-383838:#192227;
+  --color-192227-717171:#192227;
+  --color-192227-D9D9D9:#192227;
+  --color-192227-ED7B34:#192227;
+  --color-191919-717171:#191919;
+  --color-E7F0EE-252525:#E7F0EE;
+  --color-DDD-transparent:#DDD;
+  --color-rgb255-1E1E1E:rgba(255,255,255,0.3);
 }
 
 body[data-theme="dark"] {
@@ -51,13 +67,17 @@ body[data-theme="dark"] {
 
   // white to color
   --color-FFF-1C1C1C:#1C1C1C;
+  --color-FFF-1E1E1E:#1E1E1E;
   --color-FFF-121212:#121212;
   --color-FFF-B3B3B3:#B3B3B3;
+  --color-FFF-444:#444;
+  --color-FFF-717171:#717171;
   // color to white
   --color-000-FFF:#FFF;
   --color-1C1C1C-FFF:#FFF;
   --color-192227-FFF:#FFF;
   --color-ED7B34-FFF:#FFF;
+  --color-585858-FFF:#FFF;
   // main
   --color-FFF0DE-292929:#292929;
   --color-ED7B34-292929:#292929;
@@ -69,6 +89,18 @@ body[data-theme="dark"] {
   --color-sec04F1:#FFC661;
   --color-sec04F2:#88B5DB;
   --color-sec04F3:#6BB780;
+  // sub
+  --color-subBg:#121212;
+  --color-1C1C1C-383838:#383838;
+  --color-1C1C1C-BBB:#BBB;
+  --color-192227-383838:#383838;
+  --color-192227-717171:#717171;
+  --color-192227-D9D9D9:#D9D9D9;
+  --color-192227-ED7B34:#ED7B34;
+  --color-191919-717171:#717171;
+  --color-E7F0EE-252525:#252525;
+  --color-DDD-transparent:transparent;
+  --color-rgb255-1E1E1E:#252525;
 }
 
 *{outline:0!important; box-sizing:border-box;}

@@ -3,7 +3,6 @@
 export default function PortCont02({ portResult2 }) {
   return (
    <div className="portUl">
-      <h2 className="poppins">Project List</h2>
     <ul>
       {portResult2.map((a, i) => {
         return (

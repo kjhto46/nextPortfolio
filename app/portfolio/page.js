@@ -28,6 +28,8 @@ export default async function Portfolio() {
             <PortCont01 portResult={portResult} />
           </div>
           <div className="cont02">
+            <h2 className="poppins">Project List</h2>
+            <div className="flexArea">
             <PortCont02 portResult2={portResult2} />
             <div className="notionDiv">
               <div className="sticky">
@@ -65,6 +67,7 @@ export default async function Portfolio() {
                 </div>
               </a>
               </div>
+            </div>
             </div>
           </div>
         </div>
