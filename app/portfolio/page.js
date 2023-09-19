@@ -6,7 +6,7 @@ import PortCont02 from "./PortCont02";
 export default async function Portfolio() {
   const client = await connectDB;
   const db = client.db("portfolio");
-  let portResult = await db.collection("portfolioDetail").find().toArray();
+  let portResult = await db.collection("portfolioDetail").find().sort({ _id: -1 }).toArray();
   portResult = portResult.map((a) => {
     a._id = a._id.toString();
     return a;

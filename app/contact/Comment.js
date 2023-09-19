@@ -20,6 +20,16 @@ export default function ShowComment() {
   useEffect(() => {
     fetchComments();
   }, []);
+  
+  const [isActive, setIsActive] = useState(false);
+
+  const handleFocus = () => {
+    setIsActive(true);
+  };
+
+  const handleBlur = () => {
+    setIsActive(false);
+  };
 
   return (
     <>
@@ -44,7 +54,7 @@ export default function ShowComment() {
       </div>
       <div className="inputArea">
         <div className="bg"></div>
-        <div className="inputDiv">
+        <div className={`inputDiv ${isActive ? 'active' : ''}`}>
           <input
             onChange={(e) => {
               setCommName(e.target.value);
@@ -53,12 +63,14 @@ export default function ShowComment() {
             ref={inputE1}
             placeholder="이름을 입력해주세요."
           />
-          <input
+          <textarea
             onChange={(e) => {
               setComment(e.target.value);
             }}
             value={comment}
             ref={inputE2}
+            onFocus={handleFocus}
+            onBlur={handleBlur}
             placeholder="내용을 입력해주세요."
           />
           <button

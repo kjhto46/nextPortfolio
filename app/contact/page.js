@@ -3,13 +3,15 @@ import SubTit from "../components/SubTit";
 import ShowComment from "./Comment";
 
 export default function Contact() {
-   return (
-     <div className="sub contact">
-      <div className="inner">
+  return (
+    <>
+    <title>Contact</title>
+      <div className="sub contact">
+        <div className="inner">
           <SubTit titTxt="Contact" />
           <div className="flexArea">
             <div className="left">
-              <ShowComment/>
+              <ShowComment />
             </div>
             <ul className="right">
               <li>
@@ -22,12 +24,14 @@ export default function Contact() {
               </li>
               <li>
                 <h3>Github</h3>
-                <a href="https://github.com/kjhto46" target="_blank">https://github.com/kjhto46</a>
+                <a href="https://github.com/kjhto46" target="_blank">
+                  https://github.com/kjhto46
+                </a>
               </li>
             </ul>
           </div>
+        </div>
       </div>
-     </div>
-   );
- }
- 
+    </>
+  );
+}
