@@ -281,7 +281,7 @@ body[data-theme="dark"] .skills .allSkillList > li ol li > div figure { filter: 
 				figure {
 					margin: 0 0 24px; border: 2px solid var(--color-191919-717171); border-radius: 24px; overflow: hidden;
 
-					img { background-position: center; background-size: cover; background-color: var(--color-FFF-1E1E1E); }
+					img {background-repeat:no-repeat; background-position: center; background-size:auto 100%; background-color: var(--color-FFF-1E1E1E); }
 				}
 				div {
 					padding: 0 8px;
