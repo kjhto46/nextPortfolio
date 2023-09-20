@@ -23,7 +23,7 @@ export default async function PortDetail(props) {
         <Header />
         <title>{portResult.ptitle}</title>
         <div className="portSub">
-          <article className="visual" style={{ background: `url(${portResult.img01}) no-repeat center/cover` }}>
+          <article className="visual" style={{ background: ` url(${portResult.img01}) no-repeat center/auto 100%,linear-gradient(90deg, rgba(246,235,231,1) 0%, rgba(227,229,245,1) 100%)` }}>
           </article>
           <article className="detailArt">
             <div className="inner">
