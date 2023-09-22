@@ -42,7 +42,7 @@ export default function Header() {
     <header className={`header ${toggleTg ? "toggle" : ""}`}>
       <div className="inner">
         <h1>
-          <Link href={"/"}>Kwonjunhee</Link>
+          <Link href={"/"}>Kjhto46</Link>
         </h1>
         <nav>
           <ul className="gnb">

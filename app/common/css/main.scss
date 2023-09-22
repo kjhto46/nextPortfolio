@@ -34,9 +34,9 @@
 
     @for $i from 1 through 3 {
       &.mover0#{$i} {
-          opacity: calc(70% + (10% * $i));
-          filter: brightness(calc(70% + (10% * $i)));
-          &:hover {filter:brightness(calc(70% + (10% * $i))) drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.8));}
+          opacity: calc(85% + (5% * $i));
+          filter: brightness(calc(85% + (5% * $i)));
+          &:hover {filter:brightness(calc(85% + (5% * $i))) drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.8));}
       }
    }
   
