@@ -265,7 +265,7 @@ svg { transition:all 0.3s ease;}
 
 // 해더
 .header {
-  position: fixed; left: 0; right: 0; top: 0; height: var(--header-height-); z-index:8000;
+  position: fixed; left: 0; right: 0; top: 0; height: var(--header-height-); z-index:8000; transition:background 0.3s ease;
 
   > div { display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1600px; margin: 0 auto; }
   h1 a { display: flex; justify-content: center; align-items: center; height: var(--header-height-); font-size: 20px; color: var(--color-ED7B34-FFF); }
