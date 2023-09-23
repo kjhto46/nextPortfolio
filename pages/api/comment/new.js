@@ -11,6 +11,7 @@ export default async function handler(req, res) {
     let dataToSave = {
       author: req.body.author,
       content: req.body.comment,
+      password: req.body.password,
       date: req.body.date,
     };
 

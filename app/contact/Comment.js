@@ -5,7 +5,9 @@ import { useEffect, useRef, useState } from "react";
 export default function ShowComment() {
   const inputE1 = useRef();
   const inputE2 = useRef();
+  const textareaE1 = useRef();
   let [commName, setCommName] = useState("");
+  let [commPass, setCommPass] = useState("");
   let [comment, setComment] = useState("");
 
   let [data, setData] = useState([]);
@@ -39,8 +41,8 @@ export default function ShowComment() {
             data.map((a, i) => (
               <li key={i}>
                 <h3>{a.author}</h3>
-                <p>{a.content}</p>
                 <span>{a.date}</span>
+                <p>{a.content}</p>
               </li>
             ))
           ) : (
@@ -52,36 +54,53 @@ export default function ShowComment() {
           )}
         </ul>
       </div>
-      <div className="inputArea">
+      <div className={`inputArea ${isActive ? 'active' : ''}`}>
         <div className="bg"></div>
-        <div className={`inputDiv ${isActive ? 'active' : ''}`}>
+        <div className="inputDiv">
           <input
             onChange={(e) => {
               setCommName(e.target.value);
             }}
             value={commName}
             ref={inputE1}
-            placeholder="이름을 입력해주세요."
+            placeholder="닉네임을 입력해주세요."
+          />
+          <input
+            onChange={(e) => {
+              setCommPass(e.target.value);
+            }}
+            type="password"
+            value={commPass}
+            ref={inputE2}
+            placeholder="비밀번호를 입력해주세요."
           />
           <textarea
             onChange={(e) => {
               setComment(e.target.value);
             }}
             value={comment}
-            ref={inputE2}
+            ref={textareaE1}
             onFocus={handleFocus}
             onBlur={handleBlur}
             placeholder="내용을 입력해주세요."
           />
-          <button
+        </div>
+
+      </div>
+      <div className="commentBtn">
+        <button
             onClick={() => {
               if (commName === "") {
                 alert("이름을 입력해주세요.");
                 return inputE1.current.focus();
               }
               if (comment === "") {
-                alert("내용을 입력해주세요");
+                alert("비밀번호를 입력해주세요");
                 return inputE2.current.focus();
+              }
+              if (comment === "") {
+                alert("내용을 입력해주세요");
+                return textareaE1.current.focus();
               }
               const now = new Date();
               let year = now.getFullYear();
@@ -97,6 +116,7 @@ export default function ShowComment() {
                 body: JSON.stringify({
                   author: commName,
                   comment: comment,
+                  password: commPass,
                   date: krDate,
                 }),
               })
@@ -104,14 +124,14 @@ export default function ShowComment() {
                 .then((result) => {
                   fetchComments();
                   setCommName("");
+                  setCommPass("");
                   setComment("");
                 });
             }}
           >
             댓글 전송
           </button>
-        </div>
-      </div>
+          </div>
     </>
   );
 }

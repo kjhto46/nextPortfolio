@@ -8,12 +8,7 @@ export default function PortCont01({ portResult }) {
         return (
           <li key={i}>
             <Link prefetch={false} href={"/portfolio/" + portResult[i]._id}>
-              <figure>
-                <img
-                  src="/sub/portfolio_blank.png"
-                  style={{ backgroundImage: `url(${portResult[i].img01})` }}
-                  alt={portResult[i].ptitle}
-                />
+              <figure style={{ backgroundImage: `url(${portResult[i].img01})` }}>
               </figure>
               <div>
                 <h2>{portResult[i].ptitle}</h2>

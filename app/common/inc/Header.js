@@ -9,7 +9,7 @@ export default function Header() {
   const [mode, toggleTheme] = useDarkMode();
   const pathname = usePathname();
 
-
+  const [scrolling, setScrolling] = useState(false);
   const [toggleTg, setToggleTg] = useState(false);
 
   const handleToggleTg = () => {
@@ -21,7 +21,7 @@ export default function Header() {
   }, [pathname]);
 
   useEffect(() => {
-    const handleScroll = (event) => {
+    const toggleScroll = (event) => {
       if (toggleTg) {
         event.preventDefault();
         document.body.style.overflow = "hidden";
@@ -30,16 +30,33 @@ export default function Header() {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", toggleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", toggleScroll);
       document.body.style.overflow = ""; // 컴포넌트 언마운트 시 원래 상태로 복원
     };
   }, [toggleTg]);
 
+  useEffect(() => {
+    // 스크롤 이벤트 리스너를 추가합니다.
+    const handleScroll = () => {
+      if (window.scrollY >= 100) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <header className={`header ${toggleTg ? "toggle" : ""}`}>
+    <header className={`header ${toggleTg ? "toggle" : ""} ${scrolling ? 'scroll' : ''}`}>
       <div className="inner">
         <h1>
           <Link href={"/"}>Kjhto46</Link>
