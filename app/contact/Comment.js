@@ -43,6 +43,13 @@ export default function ShowComment() {
                 <h3>{a.author}</h3>
                 <span>{a.date}</span>
                 <p>{a.content}</p>
+                <button onClick={()=>{
+                  fetch('api/comment/delete', {
+                    method : 'POST'
+                  }).then(()=>{
+                  
+                  })
+                }}>X</button>
               </li>
             ))
           ) : (
