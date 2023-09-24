@@ -33,6 +33,32 @@ export default function ShowComment() {
     setIsActive(false);
   };
 
+  const handleDelete = (_id) => {
+  	const password = prompt("비밀번호를 입력하세요.");
+    console.log(_id)
+  	
+  	if (!password) {
+  	  return; // 비밀번호가 입력되지 않으면 삭제 요청 중단
+  	}
+
+  	fetch("/api/comment/delete", {
+  	  method: "POST",
+  	  body: JSON.stringify({
+  	    _id,
+  	    password,
+  	  }),
+  	  headers: {
+  	    "Content-Type": "application/json",
+  	  },
+  	})
+  	  .then((res) => res.json())
+  	  .then((result) => {
+        alert(result.message);
+        fetchComments(); // 댓글 목록 갱신
+      })
+      .catch((error) => console.error(error));
+  };
+
   return (
     <>
       <div className="showComment">
@@ -43,12 +69,8 @@ export default function ShowComment() {
                 <h3>{a.author}</h3>
                 <span>{a.date}</span>
                 <p>{a.content}</p>
-                <button onClick={()=>{
-                  fetch('api/comment/delete', {
-                    method : 'POST'
-                  }).then(()=>{
-                  
-                  })
+                <button onClick={() => {
+                handleDelete(a._id)
                 }}>X</button>
               </li>
             ))
