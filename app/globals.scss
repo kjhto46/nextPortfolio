@@ -8,6 +8,8 @@
 ============================================================================================================*/
 
 body, body[data-theme="light"]{
+  //header
+  --color-FFF9F3-121212:#FFF9F3;
   //footer
   --color-192227-292929:#192227;
   --color-192227-121212:#192227;
@@ -61,6 +63,8 @@ body, body[data-theme="light"]{
 }
 
 body[data-theme="dark"] {
+  //header
+  --color-FFF9F3-121212:#121212;
   //footer
   --color-192227-292929:#292929;
   --color-192227-121212:#121212;
@@ -304,7 +308,7 @@ svg { transition:all 0.3s ease;}
       }
     }
   }
-  &.scroll {background:var(--color-FFF-1C1C1C);}
+  &.scroll {background:var(--color-FFF9F3-121212);}
 }
 
 @media all and (max-width:1024px){

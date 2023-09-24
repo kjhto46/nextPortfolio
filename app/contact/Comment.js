@@ -35,7 +35,6 @@ export default function ShowComment() {
 
   const handleDelete = (_id) => {
     const password = prompt("비밀번호를 입력하세요.");
-    console.log(_id);
 
     if (!password) {
       return; // 비밀번호가 입력되지 않으면 삭제 요청 중단
@@ -73,9 +72,7 @@ export default function ShowComment() {
                   onClick={() => {
                     handleDelete(a._id);
                   }}
-                >
-                  X
-                </button>
+                ></button>
               </li>
             ))
           ) : (
@@ -167,7 +164,7 @@ export default function ShowComment() {
               });
           }}
         >
-          댓글 전송
+          <p>Comment</p>
         </button>
       </div>
     </>
