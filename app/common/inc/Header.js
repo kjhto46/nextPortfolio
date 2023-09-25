@@ -56,7 +56,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className={`header ${toggleTg ? "toggle" : ""} ${scrolling ? 'scroll' : ''}`}>
+    <header className={`header ${toggleTg ? "tg" : ""} ${scrolling ? 'scroll' : ''}`}>
       <div className="inner">
         <h1>
           <Link href={"/"}>Kjhto46</Link>
@@ -178,10 +178,6 @@ export default function Header() {
         </nav>
       </div>
       <div className={`tgbox ${toggleTg ? "active" : ""}`}>
-        <div onClick={handleToggleTg} className="closeToggle">
-          <span></span>
-          <span></span>
-        </div>
         <ul>
           <li>
             <Link href={"/about"}>About</Link>
@@ -196,6 +192,20 @@ export default function Header() {
             <Link href={"/contact"}>Contact</Link>
           </li>
         </ul>
+        <ol>
+          <li>
+            <a href="https://github.com/kjhto46" target="_blank">
+              <span><img src="/layout/toggle_img01.png" /></span>
+              <p>https://github.com/kjhto46</p>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:tony1996kjh@naver.com">
+              <span><img src="/layout/toggle_img02.png" /></span>
+              <p>tony1996kjh@naver.com</p>
+            </a>
+          </li>
+        </ol>
       </div>
     </header>
   );

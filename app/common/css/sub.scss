@@ -524,7 +524,12 @@ body[data-theme="dark"] .portfolio .cont02 .notionDiv .sticky a figure { filter:
 	.detailArt {
 		margin: 100px 0 0;
 
-		a.listBtn { display: inline-flex; font-size: 15px; font-weight: 500; color: var(--color-1C1C1C-FFF); }
+		a.listBtn { display: inline-flex; justify-content: flex-start; align-items: center; font-size: 15px; font-weight: 500; color: var(--color-1C1C1C-FFF); 
+			svg {
+				width:24px; margin:0 12px 0 0;
+				path {fill:var(--color-1C1C1C-FFF);}
+			}
+		}
 		.viewTit {
 			display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center; margin: 40px 0;
 
@@ -558,7 +563,10 @@ body[data-theme="dark"] .portfolio .cont02 .notionDiv .sticky a figure { filter:
 		.detailArt {
 			margin: 80px 0 0;
 	
-			a.listBtn {font-size: 14px; }
+			a.listBtn {font-size: 14px; 
+
+				svg {width:21px; margin:0 8px 0 0;}
+			}
 			.viewTit {
 				display: flex; flex-direction: row; flex-wrap: wrap; justify-content: space-between; align-items: center; margin: 32px 0;
 	
@@ -589,7 +597,9 @@ body[data-theme="dark"] .portfolio .cont02 .notionDiv .sticky a figure { filter:
 		.detailArt {
 			margin: 8vw 0 0;
 	
-			a.listBtn {font-size: 3vw; }
+			a.listBtn {font-size: 3vw; 
+				svg {width:4vw; margin:0 1.8vw 0 0;}
+			}
 			.viewTit {
 				margin: 4vw 0 8vw;
 	
