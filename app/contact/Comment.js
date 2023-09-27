@@ -97,6 +97,8 @@ export default function ShowComment() {
                 ref={inputE1}
                 placeholder="닉네임을 입력해주세요."
               />
+            </li>
+            <li>
               <input
                 onChange={(e) => {
                   setCommPass(e.target.value);

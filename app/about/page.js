@@ -15,7 +15,7 @@ export default function About() {
               <figure></figure>
               <div>
                 <h3>
-                  안녕하세요. <span>2년차 퍼블리셔</span> 권준희 입니다.
+                  안녕하세요. <span>3년차 퍼블리셔</span> 권준희 입니다.
                 </h3>
                 <ul>
                   <li>

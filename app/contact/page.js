@@ -10,9 +10,6 @@ export default function Contact() {
         <div className="inner">
           <SubTit titTxt="Contact" />
           <div className="flexArea">
-            <div className="left">
-              <ShowComment />
-            </div>
             <ul className="right">
               <li>
                 <h3>Phone Number</h3>
@@ -29,6 +26,9 @@ export default function Contact() {
                 </a>
               </li>
             </ul>
+            <div className="left">
+              <ShowComment />
+            </div>
           </div>
         </div>
       </div>
