@@ -771,7 +771,7 @@ body[data-theme="dark"] .portfolio .cont02 .notionDiv .sticky a figure { filter:
 				width: 100%;
 	
 				.showComment {
-					height: 85vw; min-height:300px; max-height:420px;
+					height: 85vw; max-height:420px;
 	
 					&::-webkit-scrollbar { width: 4px; }
 					&::-webkit-scrollbar-thumb { width: 8px; min-height: 60px; border-radius: 8px; }

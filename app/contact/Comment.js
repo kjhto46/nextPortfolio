@@ -147,7 +147,6 @@ export default function ShowComment() {
             let minutes = now.getMinutes();
             let seconds = now.getSeconds();
             const krDate = `${year}년 ${month}월 ${date}일 ${hours}:${minutes}:${seconds}`;
-            console.log(commName, comment);
             fetch("/api/comment/new", {
               method: "POST",
               body: JSON.stringify({
