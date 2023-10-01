@@ -74,7 +74,7 @@ export default function FileScroll({ mainResult }) {
                   <div className="flexAreabg"></div>
                   <div className="flexArea">
                     <figure
-                      style={{ backgroundImage: `url(${mainResult[i].wimg})` }}
+                      style={{ background: `url(${mainResult[i].wimg}) no-repeat center/cover, rgba(255,255,255,0.75)` }}
                     ></figure>
                     <div className="txtArea">
                       <h2>{mainResult[i].name}</h2>
@@ -87,6 +87,7 @@ export default function FileScroll({ mainResult }) {
                           </a>
                         </li>
                       </ul>
+                      <p>{mainResult[i].detailTxt}</p>
                     </div>
                   </div>
                 </motion.div>

@@ -307,14 +307,15 @@
         .flexAreabg {content:''; position:absolute; left:10px; right:-10px; top:70px; bottom:-10px; width:100%; height:calc(100% - 64px); border-radius:0 22px 22px 22px; background:var(--color-000-FFF); z-index:0;}
         .flexArea {position:relative; display:flex; flex-direction: row-reverse; flex-wrap: wrap;
           align-items:stretch; width: 100%; height: calc(100% - 64px); padding:30px; border-radius: 0 22px 22px 22px; border: 2px solid var(--color-000-FFF); z-index:2;
-          figure {width:70%; border-radius:16px; background-repeat:no-repeat; background-position:center; background-size:cover;}
-          .txtArea {display:flex; flex-direction:column; justify-content:space-between; width:30%; padding:0 4.75% 0 0;
+          figure {width:70%; border-radius:16px;}
+          .txtArea {display:flex; flex-direction:column; justify-content:space-between; width:30%; padding:0 4.75% 16px 0;
             h2 {font-size:24px; line-height:1.3; font-weight:700; color:#192227;}
             ul {margin:20px 0 auto;
               li {padding:12px 0; font-size:15px; font-weight:500; line-height:1.5; color:#1c1c1c; border-bottom:1px solid #1c1c1c;
                 a {font-size:15px; font-weight:500; color:#1c1c1c;}
               }
             }
+            p {font-size:16px; line-height:1.5; color:#1C1C1C;}
           }
         }
       }
@@ -385,13 +386,14 @@ body[data-theme="dark"] .section04 .mainProScroll .file{
             width: 100%; height: calc(100% - 49px); padding:24px; border-radius: 0 18px 18px 18px;
 
             figure {width:70%; border-radius:15px;}
-            .txtArea {width:30%; padding:0 4.75% 0 0;
+            .txtArea {width:30%; padding:0 4.75% 12px 0;
               h2 {font-size:20px;}
               ul {margin:17px 0 auto;
                 li {padding:10px 0; font-size:14px;
                   a {font-size:14px;}
                 }
               }
+              p {font-size:15px;}
             }
           }
         }
@@ -424,11 +426,12 @@ body[data-theme="dark"] .section04 .mainProScroll .file{
             figure {width:100%; height:50%; border-radius:3vw;}
             .txtArea {width:100%; margin:auto 0; padding:0;
               h2 {font-size:4vw;}
-              ul {margin:2.2vw 0 auto;
+              ul {margin:2.2vw 0 3vw;
                 li {padding:1.2vw 0; font-size:2.8vw;
                   a {font-size:2.8vw;}
                 }
               }
+              p {font-size:3vw;}
             }
           }
         }
