@@ -61,7 +61,7 @@ export default function Section02() {
               편의성을 향상시킬 수 있었습니다.
             </motion.li>
             <motion.li  variants={circleVariants}>
-              제가 소속된 에이전시에서는 2년 동안 퍼블리셔로 근무하면서 '마크업
+              제가 소속된 에이전시에서는 2년 5개월 동안 퍼블리셔로 근무하면서 '마크업
               + CSS + JavaScript'뿐만 아니라 PHP를 이용한 'CRUD' 작업에도
               참여하였습니다. 이 과정에서 논리 연산자를 활용하고 사용자 경험에서
               발생할 수 있는 오류에 신경을 쓰며 작업하였습니다.
