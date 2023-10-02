@@ -45,7 +45,7 @@ export default function Section02() {
           <h2>
             안녕하세요. <br />
             프론트엔드에 관심이 많은 <br />
-            <span>3년차 퍼블리셔 권준희입니다.</span>
+            <span>2년차 퍼블리셔 권준희입니다.</span>
           </h2>
           <Link href={"/about"} className="orignBtn orgBtn">
             <OrignBtn viewtxt="View About" />
