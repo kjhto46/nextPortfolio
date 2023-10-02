@@ -74,12 +74,21 @@ export default function Section03() {
   return (
     <section id="section03" className="section section03">
       <div className="inner">
-        <div className="mainTit">
+        <motion.div
+          className="mainTit"
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.8 },
+          }}
+          viewport={{ once: true }}
+        >
           <h2 className="poppins">Technology Use</h2>
           <Link href={"/skill"} className="orignBtn skyblue">
             <OrignBtn viewtxt="View About" />
           </Link>
-        </div>
+        </motion.div>
       </div>
 
       <div className="parallax">
