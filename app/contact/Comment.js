@@ -77,9 +77,12 @@ export default function ShowComment() {
             ))
           ) : (
             <>
-              <li>Loading</li>
-              <li>Loading</li>
-              <li>Loading</li>
+              <li className="skeleton"></li>
+              <li className="skeleton"></li>
+              <li className="skeleton"></li>
+              <li className="skeleton"></li>
+              <li className="skeleton"></li>
+              <li className="skeleton"></li>
             </>
           )}
         </ul>
