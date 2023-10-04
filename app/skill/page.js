@@ -55,20 +55,20 @@ export default function Skill() {
                     propsimg="/sub/skill_icon08"
                   />
                 </li>
-                <li>
+                {/* <li>
                   <MainSkill
                     txtTit="TypeScript"
                     txtSub="TypeScript에 대한 이해도를 가지고 있습니다. 정적 타입 언어로서 코드 안정성을 높이고, 타입 오류를 줄이는 중요성을 이해합니다."
                     propsimg="/sub/skill_icon09"
                   />
-                </li>
-                <li>
+                </li> */}
+                {/* <li>
                   <MainSkill
                     txtTit="Node.js"
                     txtSub="JavaScript 런타임 환경으로 서버 사이드 개발이 가능하다는 개념을 숙지하고 있습니다. 핵심 모듈과 패키지 관리자인 npm을 활용하여 서버 애플리케이션을 개발하고 관리할 수 있습니다."
                     propsimg="/sub/skill_icon10"
                   />
-                </li>
+                </li> */}
                 <li>
                   <MainSkill
                     txtTit="PHP"
