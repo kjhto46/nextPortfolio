@@ -98,8 +98,8 @@ export default function Section03() {
           <MainSkill propsimg="/main/sec03_img03" txtTit="JavaScript" />
           <MainSkill propsimg="/sub/skill_icon08" txtTit="jQuery" />
           <MainSkill propsimg="/main/sec03_img04" txtTit="Sass" />
-          <MainSkill propsimg="/main/sec03_img05" txtTit="React" />
-          {/* <MainSkill propsimg="/main/sec03_img06" txtTit="Node.js" /> */}
+          {/* <MainSkill propsimg="/main/sec03_img05" txtTit="Node.js" /> */}
+          <MainSkill propsimg="/main/sec03_img06" txtTit="React" />
           <MainSkill propsimg="/main/sec03_img07" txtTit="Next.js" />
           <MainSkill propsimg="/main/sec03_img08" txtTit="PHP" />
           <MainSkill propsimg="/main/sec03_img09" txtTit="Git" />
@@ -110,8 +110,8 @@ export default function Section03() {
           <MainSkill propsimg="/main/sec03_img09" txtTit="Git" />
           <MainSkill propsimg="/main/sec03_img08" txtTit="PHP" />
           <MainSkill propsimg="/main/sec03_img07" txtTit="Next.js" />
-          {/* <MainSkill propsimg="/main/sec03_img06" txtTit="Node.js" /> */}
-          <MainSkill propsimg="/main/sec03_img05" txtTit="React" />
+          <MainSkill propsimg="/main/sec03_img06" txtTit="React" />
+          {/* <MainSkill propsimg="/main/sec03_img05" txtTit="Node.js" /> */}
           <MainSkill propsimg="/main/sec03_img04" txtTit="Sass" />
           <MainSkill propsimg="/sub/skill_icon08" txtTit="jQuery" />
           <MainSkill propsimg="/main/sec03_img03" txtTit="JavaScript" />
