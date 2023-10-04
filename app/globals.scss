@@ -36,6 +36,7 @@ body, body[data-theme="light"]{
   --color-585858-FFF:#585858;
   // main
   --color-FFF0DE-292929:#FFF0DE;
+  --color-FFF0DE-121212:#FFF0DE;
   --color-ED7B34-292929:#ED7B34;
   --color-ED7B34-1E1E1E:#ED7B34;
   --color-585858-BBB:#585858;
@@ -92,6 +93,7 @@ body[data-theme="dark"] {
   --color-585858-FFF:#FFF;
   // main
   --color-FFF0DE-292929:#292929;
+  --color-FFF0DE-121212:#121212;
   --color-ED7B34-292929:#292929;
   --color-ED7B34-1E1E1E:#1E1E1E;
   --color-585858-BBB:#BBB;
@@ -619,4 +621,4 @@ svg { transition:all 0.3s ease;}
 }
 
 // 로딩중
-.loadingDiv {position: fixed; left: 0; right: 0; top: 0; bottom:0; display:flex; justify-content:center; align-items:center; background:#fff0de; z-index:9000;}
+.loadingDiv {background:var(--color-FFF0DE-121212); z-index:9000;}
